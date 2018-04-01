@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "top":    "sunderedblocks:blocks/crate/crate_ingot",
+      "bottom": "sunderedblocks:blocks/crate/crate_closed",
+      "side":   "sunderedblocks:blocks/crate/crate_side"
+    }
+  },
+  "variants": {
+    "normal": {
+      "model": "sunderedblocks:crate_goods"},
+    "inventory": {
+      "model": "sunderedblocks:crate_goods",
+      "transform": "forge:default-block"}
+  }
+}
