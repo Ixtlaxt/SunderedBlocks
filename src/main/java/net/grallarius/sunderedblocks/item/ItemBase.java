@@ -23,6 +23,6 @@ public class ItemBase extends Item {
 
     public void register() {
         ITEM_REGISTRY.register(this);
-        InvModel.add(this, 0, name);
+        InvModel.add(this, name);
     }
 }

@@ -1,0 +1,15 @@
+itemGroup.sundered.block=Stupid junk for idiots
+
+tile.test_block.name=Green test block
+tile.crate_test.name=Test Crate
+
+tile.vertslab_test.name=Test Vertslab
+
+tile.block_crate.apple.name=Apple Crate
+tile.block_crate.berry.name=Berry Crate
+tile.block_crate.carrot.name=Carrot Crate
+tile.block_crate.fish.name=Fish Crate
+tile.block_crate.grain.name=Grain Crate
+tile.block_crate.ingot.name=Ingot Crate
+tile.block_crate.potato.name=Potato Crate
+tile.block_crate.sugar.name=Sugar Crate

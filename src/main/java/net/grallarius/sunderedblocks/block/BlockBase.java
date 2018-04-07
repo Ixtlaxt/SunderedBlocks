@@ -19,8 +19,8 @@ public class BlockBase extends Block {
         super(material);
         this.name = name;
 
-        setRegistryName(name);
-        setUnlocalizedName(SunderedBlocks.MODID + "." + name);
+        setRegistryName(SunderedBlocks.MODID + ":" + name);
+        setUnlocalizedName(name);
         setCreativeTab(SunderedBlocks.ixTab);
         setHardness(1F);
     }
@@ -28,7 +28,7 @@ public class BlockBase extends Block {
     public void register(Item item) {
         BLOCK_REGISTRY.register(this);
         ITEM_REGISTRY.register(item);
-        InvModel.add(item,0, name);
+        InvModel.add(item, name);
     }
 
     public void register() {
