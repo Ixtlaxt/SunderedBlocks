@@ -11,6 +11,8 @@ public class ModBlocks {
 
     public static BlockCrate crateGoods = new BlockCrate("block_crate");
 
+    public static ClothesLine clothesline = new ClothesLine();
+
     public static void preInit() {
         blockTest.register();
         crateTest.register();
@@ -18,6 +20,8 @@ public class ModBlocks {
         vertslabTest.register();
 
         crateGoods.register();
+
+        clothesline.register();
 
     }
 
