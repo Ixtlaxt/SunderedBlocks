@@ -1,18 +1,32 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "sunderedblocks:clothesline",
-    "textures": {
-      "all": "sunderedblocks:blocks/clothesline/line0"
-    }
+    "model": "sunderedblocks:clothesline/clothesline",
+    "textures": { "all": "sunderedblocks:blocks/clothesline/line2" }
   },
   "variants": {
     "eastwest": {
       "true":  { "y": 90 },
       "false": { }
     },
-    "inventory": {
-      "transform": "forge:default-block"
-    }
+    "clothing": {
+      "0":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line0"}},
+      "1":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line1"}},
+      "2":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line2"}},
+      "3":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line3"}},
+      "4":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line4"}},
+      "5":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line5"}},
+      "6":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line6"}},
+      "7":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line7"}},
+      "8":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line8"}},
+      "9":  { "textures": {"all": "sunderedblocks:blocks/clothesline/line9"}},
+      "10": { "textures": {"all": "sunderedblocks:blocks/clothesline/line10"}},
+      "11": { "textures": {"all": "sunderedblocks:blocks/clothesline/line11"}},
+      "12": { "textures": {"all": "sunderedblocks:blocks/clothesline/line12"}},
+      "13": { "textures": {"all": "sunderedblocks:blocks/clothesline/line13"}},
+      "14": { "textures": {"all": "sunderedblocks:blocks/clothesline/line14"}},
+      "15": { "textures": {"all": "sunderedblocks:blocks/clothesline/line15"}}
+    },
+    "inventory": { "transform": "forge:default-block" }
   }
 }

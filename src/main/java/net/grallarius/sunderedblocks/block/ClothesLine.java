@@ -3,10 +3,7 @@ package net.grallarius.sunderedblocks.block;
 import com.ibm.icu.lang.UCharacter;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.properties.*;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -24,6 +21,7 @@ import javax.annotation.Nullable;
 public class ClothesLine extends BlockBase {
 
     public static final PropertyBool EASTWEST = PropertyBool.create("eastwest");
+    public static final PropertyInteger CLOTHING = PropertyInteger.create("clothing", 0, 15);
 
     protected static final AxisAlignedBB EASTWEST_AABB = new AxisAlignedBB(0.4D, 0.0D, 0.0D, 0.6D, 1.0D, 1.0D);
     protected static final AxisAlignedBB NORTHSOUTH_AABB =   new AxisAlignedBB(0.0D, 0.0D, 0.4D, 1.0D, 1.0D, 0.6D);
@@ -31,7 +29,7 @@ public class ClothesLine extends BlockBase {
 
     public ClothesLine() {
         super(Material.CLOTH, "clothesline");
-
+        this.setDefaultState(this.blockState.getBaseState().withProperty(EASTWEST, false).withProperty(CLOTHING, 1));
     }
 
     @Override
@@ -49,15 +47,21 @@ public class ClothesLine extends BlockBase {
         return NULL_AABB;
     }
 
+    @Override
+    public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
+        int val = (pos.getX() + pos.getY() - pos.getZ()) % 15;
+        return state.withProperty(CLOTHING, val);
+    }
+
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[] {EASTWEST});
+        return new BlockStateContainer(this, new IProperty[] {EASTWEST, CLOTHING});
     }
 
     @Override
     @Deprecated
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
-        if(placer.getHorizontalFacing().getAxis() == EnumFacing.Axis.Z) {
+        if(placer.getHorizontalFacing().getAxis() == EnumFacing.Axis.X) {
             return this.getDefaultState().withProperty(EASTWEST, true);
         }
         else {
@@ -94,7 +98,8 @@ public class ClothesLine extends BlockBase {
         return false;
     }
 
-    @Override public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity){
+    @Override public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity)
+    {
         return true;
     }
 

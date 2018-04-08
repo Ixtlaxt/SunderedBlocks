@@ -4,9 +4,9 @@
     "model": "sunderedblocks:vertslab/vertslab",
     "uvlock": true,
     "textures": {
-      "top":    "sunderedblocks:blocks/test_panel",
-      "bottom": "sunderedblocks:blocks/test_panel",
-      "side":   "sunderedblocks:blocks/test_slab"
+      "top":    "sunderedblocks:blocks/rooftiles/tile_blue",
+      "bottom": "sunderedblocks:blocks/rooftiles/tile_blue",
+      "side":   "sunderedblocks:blocks/rooftiles/tile_blue"
     }
   },
   "variants": {

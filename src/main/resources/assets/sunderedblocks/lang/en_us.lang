@@ -3,6 +3,17 @@ itemGroup.sundered.block=Stupid junk for idiots
 tile.test_block.name=Green test block
 tile.crate_test.name=Test Crate
 
+tile.block_tile_black.name=Black Roof Tiles
+tile.block_tile_blue.name=Blue Roof Tiles
+tile.block_tile_green.name=Green Roof Tiles
+tile.block_tile_red.name=Red Roof Tiles
+
+tile.vertslab_tile_black.name=Black Roof Tile Vertslab
+tile.vertslab_tile_blue.name=Blue Roof Tile Vertslab
+tile.vertslab_tile_green.name=Green Roof Tile Vertslab
+tile.vertslab_tile_red.name=Red Roof Tile Vertslab
+
+
 tile.vertslab_test.name=Test Vertslab
 
 tile.block_crate.apple.name=Apple Crate
@@ -13,3 +24,5 @@ tile.block_crate.grain.name=Grain Crate
 tile.block_crate.ingot.name=Ingot Crate
 tile.block_crate.potato.name=Potato Crate
 tile.block_crate.sugar.name=Sugar Crate
+
+tile.clothesline.name=Clothesline
