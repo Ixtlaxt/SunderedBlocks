@@ -49,7 +49,7 @@ public class ClothesLine extends BlockBase {
 
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
-        int val = (pos.getX() + pos.getY() - pos.getZ()) % 15;
+        int val = (pos.getX() + pos.getY() + pos.getZ()) % 15;
         return state.withProperty(CLOTHING, val);
     }
 
