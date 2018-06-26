@@ -1,7 +1,5 @@
 package net.grallarius.sunderedblocks.block;
 
-import com.ibm.icu.lang.UCharacter;
-import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.*;
 import net.minecraft.block.state.BlockStateContainer;

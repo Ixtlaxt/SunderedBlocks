@@ -1,5 +1,7 @@
 package net.grallarius.sunderedblocks.block;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 
 public class ModBlocks {
@@ -10,6 +12,8 @@ public class ModBlocks {
     public static BlockBase blockTileBlue = new BlockBase(Material.ROCK, "block_tile_blue");
     public static BlockBase blockTileGreen = new BlockBase(Material.ROCK, "block_tile_green");
     public static BlockBase blockTileRed = new BlockBase(Material.ROCK, "block_tile_red");
+
+    public static BlockModStairs stairsTileBlack = new BlockModStairs(blockTileBlack.getDefaultState(), "stairs_tile_black");
 
     public static BlockVertslab vertslabTest = new BlockVertslab("vertslab_test");
     public static BlockVertslab vertslabTileBlack = new BlockVertslab("vertslab_tile_black");
@@ -28,6 +32,8 @@ public class ModBlocks {
         blockTileBlue.register();
         blockTileGreen.register();
         blockTileRed.register();
+
+        stairsTileBlack.register();
 
         vertslabTest.register();
 

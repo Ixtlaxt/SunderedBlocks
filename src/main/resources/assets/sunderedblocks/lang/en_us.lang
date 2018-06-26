@@ -8,6 +8,8 @@ tile.block_tile_blue.name=Blue Roof Tiles
 tile.block_tile_green.name=Green Roof Tiles
 tile.block_tile_red.name=Red Roof Tiles
 
+tile.stairs_tile_black=Black Roof Tile Stairs
+
 tile.vertslab_tile_black.name=Black Roof Tile Vertslab
 tile.vertslab_tile_blue.name=Blue Roof Tile Vertslab
 tile.vertslab_tile_green.name=Green Roof Tile Vertslab
