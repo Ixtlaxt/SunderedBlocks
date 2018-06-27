@@ -19,10 +19,7 @@
       "potato": {"textures": {"top": "sunderedblocks:blocks/crate/crate_potato"}},
       "sugar":  {"textures": {"top": "sunderedblocks:blocks/crate/crate_sugar"}}
     },
-    "inventory": {
-      "model": "sunderedblocks:crate_goods",
-      "transform": "forge:default-block"
-    }
+    "inventory": {"transform": "forge:default-block" }
   }
 }
 
