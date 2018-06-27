@@ -1,23 +1,18 @@
 package net.grallarius.sunderedblocks.block;
 
-
-import net.grallarius.sunderedblocks.InvModel;
 import net.grallarius.sunderedblocks.SunderedBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import static net.grallarius.sunderedblocks.SunderedBlocks.BLOCK_REGISTRY;
-import static net.grallarius.sunderedblocks.SunderedBlocks.ITEM_REGISTRY;
 
 
 public class BlockModSlab extends BlockSlab {
@@ -48,13 +43,13 @@ public class BlockModSlab extends BlockSlab {
     }*/
 
     public void register(Item item) {
-        BLOCK_REGISTRY.register(this);
-        ITEM_REGISTRY.register(item);
-        InvModel.add(item, name);
+
+/*        ITEM_REGISTRY.register(item);
+        InvModel.add(item, name);*/
     }
 
     public void register() {
-        register(new ItemBlock(this).setRegistryName(getRegistryName()));
+        BLOCK_REGISTRY.register(this);
     }
 
     @SideOnly(Side.CLIENT)

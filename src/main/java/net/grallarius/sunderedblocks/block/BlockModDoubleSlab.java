@@ -43,19 +43,12 @@ public class BlockModDoubleSlab extends BlockSlab {
         super(materialIn);
         setRegistryName(name);
         setUnlocalizedName(SunderedBlocks.MODID + "." + name);
-        setCreativeTab(SunderedBlocks.ixTab);
         this.setHardness(2.0F);
         setSoundType(sound);
     }
 
-    public void register(Item item) {
-        BLOCK_REGISTRY.register(this);
-        ITEM_REGISTRY.register(item);
-        InvModel.add(item, name);
-    }
-
     public void register() {
-        register(new ItemBlock(this).setRegistryName(getRegistryName()));
+        BLOCK_REGISTRY.register(this);
     }
 
     public void setSlab(Block slab) {

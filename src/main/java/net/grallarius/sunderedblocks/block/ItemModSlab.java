@@ -1,7 +1,6 @@
 package net.grallarius.sunderedblocks.block;
 
 import net.grallarius.sunderedblocks.InvModel;
-import net.grallarius.sunderedblocks.SunderedBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.state.IBlockState;
@@ -30,7 +29,6 @@ public class ItemModSlab extends ItemBlock {
         this.doubleSlab = doubleSlab;
         setRegistryName(block.getRegistryName() + "_item");
         setUnlocalizedName(name);
-        setCreativeTab(SunderedBlocks.ixTab);
     }
 
     public void register() {
