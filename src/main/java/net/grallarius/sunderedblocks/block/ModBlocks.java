@@ -19,6 +19,15 @@ public class ModBlocks {
     public static BlockModDoubleSlab doubleslabTileBlack = new BlockModDoubleSlab(Material.ROCK, "doubleslab_tile_black");
     public static BlockModSlab slabTileBlack = new BlockModSlab(Material.ROCK,"slab_tile_black", doubleslabTileBlack);
     public static ItemModSlab slabItemTileBlack = new ItemModSlab(slabTileBlack, doubleslabTileBlack);
+    public static BlockModDoubleSlab doubleslabTileBlue = new BlockModDoubleSlab(Material.ROCK, "doubleslab_tile_blue");
+    public static BlockModSlab slabTileBlue = new BlockModSlab(Material.ROCK,"slab_tile_blue", doubleslabTileBlue);
+    public static ItemModSlab slabItemTileBlue = new ItemModSlab(slabTileBlue, doubleslabTileBlue);
+    public static BlockModDoubleSlab doubleslabTileGreen = new BlockModDoubleSlab(Material.ROCK, "doubleslab_tile_green");
+    public static BlockModSlab slabTileGreen = new BlockModSlab(Material.ROCK,"slab_tile_green", doubleslabTileGreen);
+    public static ItemModSlab slabItemTileGreen = new ItemModSlab(slabTileGreen, doubleslabTileGreen);
+    public static BlockModDoubleSlab doubleslabTileRed = new BlockModDoubleSlab(Material.ROCK, "doubleslab_tile_red");
+    public static BlockModSlab slabTileRed = new BlockModSlab(Material.ROCK,"slab_tile_red", doubleslabTileRed);
+    public static ItemModSlab slabItemTileRed = new ItemModSlab(slabTileRed, doubleslabTileRed);
 
     public static BlockVertslab vertslabTest = new BlockVertslab("vertslab_test");
     public static BlockVertslab vertslabTileBlack = new BlockVertslab("vertslab_tile_black");
@@ -47,6 +56,18 @@ public class ModBlocks {
         doubleslabTileBlack.register();
         doubleslabTileBlack.setSlab(slabTileBlack);
         slabItemTileBlack.register();
+        slabTileBlue.register();
+        doubleslabTileBlue.register();
+        doubleslabTileBlue.setSlab(slabTileBlue);
+        slabItemTileBlue.register();
+        slabTileGreen.register();
+        doubleslabTileGreen.register();
+        doubleslabTileGreen.setSlab(slabTileGreen);
+        slabItemTileGreen.register();
+        slabTileRed.register();
+        doubleslabTileRed.register();
+        doubleslabTileRed.setSlab(slabTileRed);
+        slabItemTileRed.register();
 
         vertslabTest.register();
 

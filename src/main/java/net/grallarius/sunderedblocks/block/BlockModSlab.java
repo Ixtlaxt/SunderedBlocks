@@ -23,6 +23,7 @@ public class BlockModSlab extends BlockSlab {
 
     public BlockModSlab(Material materialIn, String name, Block block) {
         super(materialIn);
+        this.name = name;
         setRegistryName(name);
         setUnlocalizedName(SunderedBlocks.MODID + "." + name);
         this.setHardness(2.0F);

@@ -1,0 +1,15 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:sundered_half_slab",
+    "textures": {
+      "top":    "sunderedblocks:blocks/rooftiles/tile_blue",
+      "bottom": "sunderedblocks:blocks/rooftiles/tile_blue",
+      "side":   "sunderedblocks:blocks/rooftiles/tile_blue"
+    }
+  },
+  "variants": {
+    "half=bottom": { "model": "sunderedblocks:sundered_half_slab" },
+    "half=top": { "model": "sunderedblocks:sundered_upper_slab" },
+    "inventory": {"model": "sunderedblocks:sundered_half_slab"}
+  }
+}

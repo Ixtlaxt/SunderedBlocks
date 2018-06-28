@@ -41,6 +41,7 @@ public class BlockModDoubleSlab extends BlockSlab {
 
     public BlockModDoubleSlab(Material materialIn, String name, SoundType sound) {
         super(materialIn);
+        this.name = name;
         setRegistryName(name);
         setUnlocalizedName(SunderedBlocks.MODID + "." + name);
         this.setHardness(2.0F);

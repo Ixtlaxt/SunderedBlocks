@@ -1,0 +1,13 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:sundered_slab_double",
+    "textures": {
+      "all":    "sunderedblocks:blocks/rooftiles/tile_blue"
+    }
+  },
+  "variants": {
+    "half=bottom": { "model": "sunderedblocks:sundered_slab_double" },
+    "half=top": { "model": "sunderedblocks:sundered_slab_double" },
+    "inventory": {"model": "sunderedblocks:sundered_slab_double"}
+  }
+}
