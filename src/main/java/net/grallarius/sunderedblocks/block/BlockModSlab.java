@@ -75,6 +75,7 @@ public class BlockModSlab extends BlockSlab {
 
 
     @Override
+    @Deprecated
     public IBlockState getStateFromMeta(int meta) {
         IBlockState iblockstate = this.getDefaultState();
         if (!this.isDouble())

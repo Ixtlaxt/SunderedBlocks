@@ -44,6 +44,7 @@ public class BlockVertslab extends BlockBase{
     }
 
     @Override
+    @Deprecated
     public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
 
         EnumShape shape = getShape(state, world, pos);
@@ -72,6 +73,7 @@ public class BlockVertslab extends BlockBase{
         return EnumShape.SLAB;
     }
 
+    @Deprecated
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
@@ -81,6 +83,7 @@ public class BlockVertslab extends BlockBase{
     }
 
     @Override
+    @Deprecated
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 
         if(state.getValue(SHAPE) == EnumShape.EDGE) {
@@ -125,6 +128,7 @@ public class BlockVertslab extends BlockBase{
     }
 
     @Override
+    @Deprecated
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState) {
         if (!isActualState) {
             state = this.getActualState(state, worldIn, pos);
@@ -215,6 +219,7 @@ public class BlockVertslab extends BlockBase{
     }
 
     @Override
+    @Deprecated
     public IBlockState getStateFromMeta(int meta) {
         return this.getDefaultState().withProperty(FACING, EnumFacing.getFront(meta));
     }

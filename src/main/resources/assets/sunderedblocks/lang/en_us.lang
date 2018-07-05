@@ -40,3 +40,5 @@ tile.block_crate.potato.name=Potato Crate
 tile.block_crate.sugar.name=Sugar Crate
 
 tile.clothesline.name=Clothesline
+
+tile.block_workbench=Block Workbench

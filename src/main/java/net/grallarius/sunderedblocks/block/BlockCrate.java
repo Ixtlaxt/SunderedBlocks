@@ -63,6 +63,7 @@ public class BlockCrate extends BlockBase {
     }
 
     @Override
+    @Deprecated
     public IBlockState getStateFromMeta(int meta) {
         return this.getDefaultState().withProperty(GOOD, EnumGood.byMetadata(meta));
     }
@@ -72,6 +73,7 @@ public class BlockCrate extends BlockBase {
     }
 
     @Override
+    @Deprecated
     public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         EnumGood good = EnumGood.byMetadata(meta);
         return this.getDefaultState().withProperty(GOOD, good);

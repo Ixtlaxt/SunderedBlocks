@@ -31,6 +31,7 @@ public class ClothesLine extends BlockBase {
     }
 
     @Override
+    @Deprecated
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         if(state.getValue(EASTWEST) == true) {
             return EASTWEST_AABB;
@@ -41,11 +42,13 @@ public class ClothesLine extends BlockBase {
     }
 
     @Nullable
+    @Deprecated
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
         return NULL_AABB;
     }
 
     @Override
+    @Deprecated
     public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
         int val = (pos.getX() + pos.getY() + pos.getZ()) % 15;
         return state.withProperty(CLOTHING, val);
@@ -68,6 +71,7 @@ public class ClothesLine extends BlockBase {
     }
 
     @Override
+    @Deprecated
     public IBlockState getStateFromMeta(int meta) {
         if(meta == 1) {
             return this.getDefaultState().withProperty(EASTWEST, true);
@@ -87,11 +91,13 @@ public class ClothesLine extends BlockBase {
     }
 
     @Override
+    @Deprecated
     public boolean isOpaqueCube(IBlockState state) {
         return false;
     }
 
     @Override
+    @Deprecated
     public boolean isFullCube(IBlockState state) {
         return false;
     }

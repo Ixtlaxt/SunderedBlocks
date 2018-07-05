@@ -1,5 +1,6 @@
 package net.grallarius.sunderedblocks.block;
 
+import net.grallarius.sunderedblocks.block.workbench.BlockWorkbench;
 import net.minecraft.block.material.Material;
 
 public class ModBlocks {
@@ -38,6 +39,8 @@ public class ModBlocks {
     public static BlockCrate crateGoods = new BlockCrate("block_crate");
 
     public static ClothesLine clothesline = new ClothesLine();
+
+    public static BlockWorkbench workbench = new BlockWorkbench("block_workbench");
 
     public static void preInit() {
         blockTest.register();
@@ -79,6 +82,8 @@ public class ModBlocks {
         crateGoods.register();
 
         clothesline.register();
+
+        workbench.register();
 
     }
 

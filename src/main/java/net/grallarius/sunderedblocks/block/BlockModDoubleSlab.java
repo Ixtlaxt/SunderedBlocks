@@ -57,6 +57,7 @@ public class BlockModDoubleSlab extends BlockSlab {
     }
 
     @Override
+    @Deprecated
     public ArrayList<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
         ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
         drops.add(new ItemStack(Item.getItemFromBlock(this.slab), 1));
@@ -86,6 +87,7 @@ public class BlockModDoubleSlab extends BlockSlab {
     }
 
     @Override
+    @Deprecated
     public IBlockState getStateFromMeta(int meta) {
         IBlockState iblockstate = this.getDefaultState();
         if (!this.isDouble())

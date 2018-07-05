@@ -1,6 +1,8 @@
 package net.grallarius.sunderedblocks;
 
 import net.grallarius.sunderedblocks.block.ModBlocks;
+import net.grallarius.sunderedblocks.network.PacketRequestUpdateWorkbench;
+import net.grallarius.sunderedblocks.network.PacketUpdateWorkbench;
 import net.grallarius.sunderedblocks.proxy.ServerProxy;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,7 +14,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod(modid = SunderedBlocks.MODID, name = SunderedBlocks.NAME, version = SunderedBlocks.VERSION)
@@ -25,6 +30,9 @@ public class SunderedBlocks {
 
     public static IForgeRegistry<Block> BLOCK_REGISTRY = GameRegistry.findRegistry(Block.class);
     public static IForgeRegistry<Item>  ITEM_REGISTRY  = GameRegistry.findRegistry(Item.class);
+
+    public static SimpleNetworkWrapper wrapper = NetworkRegistry.INSTANCE.newSimpleChannel(SunderedBlocks.MODID);
+
 
     public static CreativeTabs ixTab = new CreativeTabs("sundered.block") {
         @Override
@@ -39,7 +47,13 @@ public class SunderedBlocks {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+
         proxy.preInit(event);
+
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGuiHandler());
+
+        wrapper.registerMessage(new PacketUpdateWorkbench.Handler(), PacketUpdateWorkbench.class, 0, Side.CLIENT);
+        wrapper.registerMessage(new PacketRequestUpdateWorkbench.Handler(), PacketRequestUpdateWorkbench.class, 0, Side.SERVER);
     }
 
     @EventHandler

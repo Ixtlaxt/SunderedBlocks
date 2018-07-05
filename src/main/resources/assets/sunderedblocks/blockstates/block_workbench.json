@@ -1,0 +1,23 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:crate_goods",
+    "textures": {
+      "top":    "sunderedblocks:blocks/crate/crate_closed",
+      "bottom": "sunderedblocks:blocks/crate/crate_closed",
+      "side":   "blocks/bookshelf"
+    }
+  },
+  "variants": {
+    "facing": {
+      "north": { "y": 90 },
+      "east":  { "y": 180 },
+      "south": { "y": 270 },
+      "west":  { "y": 0 }
+    },
+    "inventory": {
+      "model": "sunderedblocks:crate_goods",
+      "transform": "forge:default-block"
+    }
+  }
+}
