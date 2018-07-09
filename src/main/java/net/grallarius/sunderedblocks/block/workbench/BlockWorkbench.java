@@ -60,6 +60,9 @@ public class BlockWorkbench extends BlockTileEntity<TileEntityWorkbench> {
         if (itemHandler != null) {
             ItemStack stack1 = itemHandler.getStackInSlot(0);
             ItemStack stack2 = itemHandler.getStackInSlot(1);
+            ItemStack stack3 = itemHandler.getStackInSlot(2);
+            ItemStack stack4 = itemHandler.getStackInSlot(3);
+            ItemStack stack5 = itemHandler.getStackInSlot(4);
             if (!stack1.isEmpty()) {
                 EntityItem item1 = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack1);
                 world.spawnEntity(item1);
@@ -67,6 +70,18 @@ public class BlockWorkbench extends BlockTileEntity<TileEntityWorkbench> {
             if (!stack2.isEmpty()) {
                 EntityItem item2 = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack2);
                 world.spawnEntity(item2);
+            }
+            if (!stack1.isEmpty()) {
+                EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack3);
+                world.spawnEntity(item);
+            }
+            if (!stack2.isEmpty()) {
+                EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack4);
+                world.spawnEntity(item);
+            }
+            if (!stack2.isEmpty()) {
+                EntityItem item = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack5);
+                world.spawnEntity(item);
             }
         }
         super.breakBlock(world, pos, state);

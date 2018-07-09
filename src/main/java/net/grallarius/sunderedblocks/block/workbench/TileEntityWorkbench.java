@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public class TileEntityWorkbench extends TileEntity {
     public int facing;
 
-    public ItemStackHandler inventory = new ItemStackHandler(2) {
+    public ItemStackHandler inventory = new ItemStackHandler(5) {
 
         @Override
         protected void onContentsChanged(int slot){

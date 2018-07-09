@@ -1,4 +1,4 @@
-itemGroup.sundered.block=Stupid junk for idiots
+itemGroup.sundered.block=Pretty Blocks!
 
 tile.test_block.name=Green test block
 tile.crate_test.name=Test Crate
@@ -8,19 +8,19 @@ tile.block_tile_blue.name=Blue Roof Tiles
 tile.block_tile_green.name=Green Roof Tiles
 tile.block_tile_red.name=Red Roof Tiles
 
-tile.stairs_tile_black=Black Roof Tile Stairs
-tile.stairs_tile_blue=Blue Roof Tile Stairs
-tile.stairs_tile_green=Green Roof Tile Stairs
-tile.stairs_tile_red=Red Roof Tile Stairs
+tile.stairs_tile_black.name=Black Roof Tile Stairs
+tile.stairs_tile_blue.name=Blue Roof Tile Stairs
+tile.stairs_tile_green.name=Green Roof Tile Stairs
+tile.stairs_tile_red.name=Red Roof Tile Stairs
 
-tile.slab_tile_black=Black Roof Tile Slab
-tile.doubleslab_tile_black=Black Roof Tile Doubleslab
-tile.slab_tile_blue=Blue Roof Tile Slab
-tile.doubleslab_tile_blue=Blue Roof Tile Doubleslab
-tile.slab_tile_green=Green Roof Tile Slab
-tile.doubleslab_tile_green=Green Roof Tile Doubleslab
-tile.slab_tile_red=Red Roof Tile Slab
-tile.doubleslab_tile_red=Red Roof Tile Doubleslab
+tile.slab_tile_black.name=Black Roof Tile Slab
+tile.doubleslab_tile_black.name=Black Roof Tile Doubleslab
+tile.slab_tile_blue.name=Blue Roof Tile Slab
+tile.doubleslab_tile_blue.name=Blue Roof Tile Doubleslab
+tile.slab_tile_green.name=Green Roof Tile Slab
+tile.doubleslab_tile_green.name=Green Roof Tile Doubleslab
+tile.slab_tile_red.name=Red Roof Tile Slab
+tile.doubleslab_tile_red.name=Red Roof Tile Doubleslab
 
 tile.vertslab_tile_black.name=Black Roof Tile Vertslab
 tile.vertslab_tile_blue.name=Blue Roof Tile Vertslab
@@ -41,4 +41,9 @@ tile.block_crate.sugar.name=Sugar Crate
 
 tile.clothesline.name=Clothesline
 
-tile.block_workbench=Block Workbench
+tile.block_workbench.name=Block Workbench
+
+item.saw.name=Saw
+item.chisel.name=Chisel
+item.hammer.name=Hammer
+item.wrench.name=Wrench

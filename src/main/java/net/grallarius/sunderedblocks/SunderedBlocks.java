@@ -52,8 +52,10 @@ public class SunderedBlocks {
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGuiHandler());
 
-        wrapper.registerMessage(new PacketUpdateWorkbench.Handler(), PacketUpdateWorkbench.class, 0, Side.CLIENT);
-        wrapper.registerMessage(new PacketRequestUpdateWorkbench.Handler(), PacketRequestUpdateWorkbench.class, 0, Side.SERVER);
+        int index = 0;
+
+        wrapper.registerMessage(new PacketUpdateWorkbench.Handler(), PacketUpdateWorkbench.class, index++, Side.CLIENT);
+        wrapper.registerMessage(new PacketRequestUpdateWorkbench.Handler(), PacketRequestUpdateWorkbench.class, index++, Side.SERVER);
     }
 
     @EventHandler

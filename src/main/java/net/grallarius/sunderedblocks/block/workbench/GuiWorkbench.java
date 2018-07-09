@@ -10,7 +10,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiWorkbench extends GuiContainer {
-    private static final ResourceLocation BG_TEXTURE = new ResourceLocation(SunderedBlocks.MODID, "textures/gui/singleslotgui.png");
+    private static final ResourceLocation BG_TEXTURE = new ResourceLocation(SunderedBlocks.MODID, "textures/gui/blockbench_gui.png");
     private InventoryPlayer playerInv;
 
     public GuiWorkbench(Container container, InventoryPlayer playerInv) {
