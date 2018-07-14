@@ -1,5 +1,6 @@
 package net.grallarius.sunderedblocks.block;
 
+import net.grallarius.sunderedblocks.block.registers.GreenBlocks;
 import net.grallarius.sunderedblocks.block.workbench.BlockWorkbench;
 import net.minecraft.block.material.Material;
 
@@ -27,6 +28,7 @@ public class ModBlocks {
     public static BlockModSlab slabStoneBlueDarkFloor = new BlockModSlab(Material.ROCK,"slab_stone_blue_dark_floor", slabDoubleStoneBlueDarkFloor);
     public static ItemModSlab slabItemStoneBlueDarkFloor = new ItemModSlab(slabStoneBlueDarkFloor, slabDoubleStoneBlueDarkFloor);
 
+/*
     public static BlockBase blockStoneBrownDark = new BlockBase(Material.ROCK, "block_stone_brown_dark");
     public static BlockBase blockStoneBrownDarkBrick = new BlockBase(Material.ROCK, "block_stone_brown_dark_brick");
     public static BlockBase blockStoneBrownDarkFloor = new BlockBase(Material.ROCK, "block_stone_brown_dark_floor");
@@ -44,16 +46,9 @@ public class ModBlocks {
     public static BlockBase blockStoneCyanLightBrick = new BlockBase(Material.ROCK, "block_stone_cyan_light_brick");
     public static BlockBase blockStoneCyanLightFloor = new BlockBase(Material.ROCK, "block_stone_cyan_light_floor");
     public static BlockBase blockStoneCyanLightPanel = new BlockBase(Material.ROCK, "block_stone_cyan_light_panel");
+*/
 
-    public static BlockBase blockStoneGreenDark = new BlockBase(Material.ROCK, "block_stone_green_dark");
-    public static BlockBase blockStoneGreenDarkBrick = new BlockBase(Material.ROCK, "block_stone_green_dark_brick");
-    public static BlockBase blockStoneGreenDarkFloor = new BlockBase(Material.ROCK, "block_stone_green_dark_floor");
-    public static BlockBase blockStoneGreenDarkPanel = new BlockBase(Material.ROCK, "block_stone_green_dark_panel");
-    public static BlockBase blockStoneGreenLight = new BlockBase(Material.ROCK, "block_stone_green_light");
-    public static BlockBase blockStoneGreenLightBrick = new BlockBase(Material.ROCK, "block_stone_green_light_brick");
-    public static BlockBase blockStoneGreenLightFloor = new BlockBase(Material.ROCK, "block_stone_green_light_floor");
-    public static BlockBase blockStoneGreenLightPanel = new BlockBase(Material.ROCK, "block_stone_green_light_panel");
-
+/*
     public static BlockBase blockStoneMagentaDark = new BlockBase(Material.ROCK, "block_stone_magenta_dark");
     public static BlockBase blockStoneMagentaDarkBrick = new BlockBase(Material.ROCK, "block_stone_magenta_dark_brick");
     public static BlockBase blockStoneMagentaDarkFloor = new BlockBase(Material.ROCK, "block_stone_magenta_dark_floor");
@@ -98,7 +93,7 @@ public class ModBlocks {
     public static BlockBase blockStoneYellowLightBrick = new BlockBase(Material.ROCK, "block_stone_yellow_light_brick");
     public static BlockBase blockStoneYellowLightFloor = new BlockBase(Material.ROCK, "block_stone_yellow_light_floor");
     public static BlockBase blockStoneYellowLightPanel = new BlockBase(Material.ROCK, "block_stone_yellow_light_panel");
-
+*/
     public static BlockModStairs stairsTileBlack = new BlockModStairs(blockTileBlack.getDefaultState(), "stairs_tile_black");
     public static BlockModStairs stairsTileBlue = new BlockModStairs(blockTileBlue.getDefaultState(), "stairs_tile_blue");
     public static BlockModStairs stairsTileGreen = new BlockModStairs(blockTileGreen.getDefaultState(), "stairs_tile_green");
@@ -130,6 +125,7 @@ public class ModBlocks {
 
     public static BlockWorkbench workbench = new BlockWorkbench("block_workbench");
 
+
     public static void preInit() {
         blockTest.register();
         blockTileBlack.register();
@@ -137,22 +133,9 @@ public class ModBlocks {
         blockTileGreen.register();
         blockTileRed.register();
 
-        blockStoneBlueDark.register();
-        blockStoneBlueDarkBrick.register();
-        blockStoneBlueDarkFloor.register();
-        blockStoneBlueDarkPanel.register();
-        blockStoneBlueLight.register();
-        blockStoneBlueLightBrick.register();
-        blockStoneBlueLightFloor.register();
-        blockStoneBlueLightPanel.register();
-        slabStoneBlueDark.register();
-        slabDoubleStoneBlueDark.register();
-        slabDoubleStoneBlueDark.setSlab(slabStoneBlueDark);
-        slabItemStoneBlueDark.register();
-        slabStoneBlueDarkFloor.register();
-        slabDoubleStoneBlueDarkFloor.register();
-        slabDoubleStoneBlueDarkFloor.setSlab(slabStoneBlueDarkFloor);
-        slabItemStoneBlueDarkFloor.register();
+        GreenBlocks.register();
+
+/*
 
         blockStoneBrownDark.register();
         blockStoneBrownDarkBrick.register();
@@ -171,15 +154,6 @@ public class ModBlocks {
         blockStoneCyanLightBrick.register();
         blockStoneCyanLightFloor.register();
         blockStoneCyanLightPanel.register();
-
-        blockStoneGreenDark.register();
-        blockStoneGreenDarkBrick.register();
-        blockStoneGreenDarkFloor.register();
-        blockStoneGreenDarkPanel.register();
-        blockStoneGreenLight.register();
-        blockStoneGreenLightBrick.register();
-        blockStoneGreenLightFloor.register();
-        blockStoneGreenLightPanel.register();
 
         blockStoneMagentaDark.register();
         blockStoneMagentaDarkBrick.register();
@@ -225,7 +199,7 @@ public class ModBlocks {
         blockStoneYellowLightBrick.register();
         blockStoneYellowLightFloor.register();
         blockStoneYellowLightPanel.register();
-
+*/
         stairsTileBlack.register();
         stairsTileBlue.register();
         stairsTileGreen.register();
@@ -278,4 +252,26 @@ public class ModBlocks {
     public static void registerModels() {
 
     }
+
+    private static void blueBlocks(){
+
+        blockStoneBlueDark.register();
+        blockStoneBlueDarkBrick.register();
+        blockStoneBlueDarkFloor.register();
+        blockStoneBlueDarkPanel.register();
+        blockStoneBlueLight.register();
+        blockStoneBlueLightBrick.register();
+        blockStoneBlueLightFloor.register();
+        blockStoneBlueLightPanel.register();
+        slabStoneBlueDark.register();
+        slabDoubleStoneBlueDark.register();
+        slabDoubleStoneBlueDark.setSlab(slabStoneBlueDark);
+        slabItemStoneBlueDark.register();
+        slabStoneBlueDarkFloor.register();
+        slabDoubleStoneBlueDarkFloor.register();
+        slabDoubleStoneBlueDarkFloor.setSlab(slabStoneBlueDarkFloor);
+        slabItemStoneBlueDarkFloor.register();
+
+    }
+
 }

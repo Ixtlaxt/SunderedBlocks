@@ -1,0 +1,13 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:sundered_half_slab",
+    "textures": {
+      "top":    "sunderedblocks:blocks/stone/green_dark_floor",
+      "bottom": "sunderedblocks:blocks/stone/green_dark_floor",
+      "side":   "sunderedblocks:blocks/stone/green_dark_floor"
+    }
+  },
+  "variants": {
+    "inventory": {"model": "sunderedblocks:sundered_half_slab"}
+  }
+}

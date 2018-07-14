@@ -40,7 +40,7 @@ public class BlockVertslab extends BlockBase{
 
     public BlockVertslab(String name) {
         super(Material.ROCK, name);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.SOUTH));
     }
 
     @Override
