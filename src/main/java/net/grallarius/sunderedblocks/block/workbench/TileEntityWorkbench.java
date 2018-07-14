@@ -24,6 +24,7 @@ public class TileEntityWorkbench extends TileEntity {
             if (!world.isRemote) {
                 SunderedBlocks.wrapper.sendToAllAround(new PacketUpdateWorkbench(TileEntityWorkbench.this), new NetworkRegistry.TargetPoint(world.provider.getDimension(), pos.getX(), pos.getY(), pos.getZ(), 64));
             }
+            markDirty();
         }
 
     };

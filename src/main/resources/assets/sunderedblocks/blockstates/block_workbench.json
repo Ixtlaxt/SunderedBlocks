@@ -1,22 +1,29 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "sunderedblocks:crate_goods",
-    "textures": {
-      "top":    "sunderedblocks:blocks/crate/crate_closed",
-      "bottom": "sunderedblocks:blocks/crate/crate_closed",
-      "side":   "blocks/bookshelf"
-    }
+    "model": "sunderedblocks:blockworkbench", "y": 180
   },
   "variants": {
     "facing": {
-      "north": { "y": 90 },
-      "east":  { "y": 180 },
-      "south": { "y": 270 },
-      "west":  { "y": 0 }
+      "north": { "y": 0 },
+      "east":  { "y": 90 },
+      "south": { "y": 180 },
+      "west":  { "y": 270 }
     },
+    "hassaw": {
+      "true": {"submodel" : "sunderedblocks:saw_submodel"},
+      "false": {}},
+    "hashammer": {
+      "true": {"submodel" : "sunderedblocks:hammer_submodel"},
+    "false": {}},
+    "haschisel": {
+      "true": {"submodel" : "sunderedblocks:chisel_submodel"},
+    "false": {}},
+    "haswrench": {
+      "true": {"submodel" : "sunderedblocks:wrench_submodel"},
+    "false": {}},
     "inventory": {
-      "model": "sunderedblocks:crate_goods",
+      "model": "sunderedblocks:blockworkbench",
       "transform": "forge:default-block"
     }
   }
