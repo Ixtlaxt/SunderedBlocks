@@ -4,16 +4,16 @@
     "model": "sunderedblocks:panel",
     "uvlock": true,
     "textures": {
-      "edge":    "sunderedblocks:blocks/stone/green_dark_panel",
-      "face":   "sunderedblocks:blocks/stone/green_dark_floor"
+      "edge": "sunderedblocks:blocks/stone/green_dark_panel",
+      "face": "sunderedblocks:blocks/stone/green_dark_floor"
     }
   },
   "variants": {
     "facing": {
-      "north": { "x": 90,  "y": 180 },
-      "east":  { "x": 90,  "y": 270 },
+      "north": { "x": 90, "y": 180 },
+      "east":  { "x": 90, "y": 270 },
       "south": { "x": 90 },
-      "west":  { "x": 90,  "y": 90 },
+      "west":  { "x": 90, "y": 90 },
       "up":    { "x": 180 },
       "down":  { "x": 0 }
     },

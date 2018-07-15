@@ -2,9 +2,9 @@
   "defaults": {
     "model": "cube_bottom_top",
     "textures": {
-      "top":    "sunderedblocks:blocks/stone/blue_dark_floor",
-      "bottom": "sunderedblocks:blocks/stone/blue_dark_floor",
-      "side":   "sunderedblocks:blocks/stone/blue_dark_floor"
+      "top":    "sunderedblocks:blocks/stone/blue_dark_floor_double",
+      "bottom": "sunderedblocks:blocks/stone/blue_dark_floor_double",
+      "side":   "sunderedblocks:blocks/stone/blue_dark_floor_double"
     }
   },
   "variants": {
