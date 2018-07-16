@@ -30,18 +30,22 @@ public class ModBlocks {
     public static BlockModSlab slabTileRed = new BlockModSlab(Material.ROCK,"slab_tile_red", doubleslabTileRed);
     public static ItemModSlab slabItemTileRed = new ItemModSlab(slabTileRed, doubleslabTileRed);
 
-
-
     public static BlockVertslab vertslabTest = new BlockVertslab("vertslab_test");
     public static BlockVertslab vertslabTileBlack = new BlockVertslab("vertslab_tile_black");
     public static BlockVertslab vertslabTileBlue = new BlockVertslab("vertslab_tile_blue");
     public static BlockVertslab vertslabTileGreen = new BlockVertslab("vertslab_tile_green");
     public static BlockVertslab vertslabTileRed = new BlockVertslab("vertslab_tile_red");
 
+    public static BlockModSand blockSandBlack = new BlockModSand("block_sand_black");
+    public static BlockModSand blockSandBrown = new BlockModSand("block_sand_brown");
+    public static BlockModSand blockSandGrey = new BlockModSand("block_sand_grey");
+    public static BlockModSand blockSandTropic = new BlockModSand("block_sand_tropic");
+    public static BlockModSand blockSandWhite = new BlockModSand("block_sand_white");
+
 
 //    public static ClothesLine clothesline = new ClothesLine();
 
-//    public static BlockWorkbench workbench = new BlockWorkbench("block_workbench");
+    public static BlockWorkbench workbench = new BlockWorkbench("block_workbench");
 
 
     public static void preInit() {
@@ -61,6 +65,11 @@ public class ModBlocks {
         WhiteBlocks.register();
         YellowBlocks.register();
 
+        blockSandBlack.register();
+        blockSandBrown.register();
+        blockSandGrey.register();
+        blockSandTropic.register();
+        blockSandWhite.register();
 
         stairsTileBlack.register();
         stairsTileBlue.register();
