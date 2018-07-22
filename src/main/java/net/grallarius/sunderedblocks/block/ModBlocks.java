@@ -56,15 +56,15 @@ public class ModBlocks {
         blockTileRed.register();
 
         BlueBlocks.register();
-//        BrownBlocks.register();
-//        CyanBlocks.register();
-//        GoldenBlocks.register();
-//        GreenBlocks.register();
-//        MagentaBlocks.register();
-//        PurpleBlocks.register();
-//        RedBlocks.register();
-//        WhiteBlocks.register();
-//        YellowBlocks.register();
+        BrownBlocks.register();
+        CyanBlocks.register();
+        GoldenBlocks.register();
+        GreenBlocks.register();
+        MagentaBlocks.register();
+        PurpleBlocks.register();
+        RedBlocks.register();
+        WhiteBlocks.register();
+        YellowBlocks.register();
 
         blockSandBlack.register();
         blockSandBrown.register();

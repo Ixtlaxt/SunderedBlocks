@@ -1,6 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
+    "model": "sunderedblocks:panel",
     "uvlock": true,
     "textures": {
       "edge": "sunderedblocks:blocks/stone/blue_dark_panel",
@@ -8,13 +9,16 @@
     }
   },
   "variants": {
-    "north": { "true": { "submodel": { "model": "sunderedblocks:panel", "x": 90, "y": 180 }}, "false": {}},
-    "east":  { "true": { "submodel": { "model": "sunderedblocks:panel", "x": 90, "y": 270 }}, "false": {}},
-    "south": { "true": { "submodel": { "model": "sunderedblocks:panel", "x": 90 }}, "false": {}},
-    "west":  { "true": { "submodel": { "model": "sunderedblocks:panel", "x": 90, "y": 90 }}, "false": {}},
-    "up":    { "true": { "submodel": { "model": "sunderedblocks:panel", "x": 180 }}, "false": {}},
-    "down":  { "true": { "submodel": { "model": "sunderedblocks:panel" }}, "false": {}},
-
-    "inventory": { "transform": "forge:default-block" }
+    "facing": {
+      "north": { "x": 90, "y": 180 },
+      "east":  { "x": 90, "y": 270 },
+      "south": { "x": 90 },
+      "west":  { "x": 90, "y": 90 },
+      "up":    { "x": 180 },
+      "down":  { "x": 0 }
+    },
+    "inventory": {
+      "transform": "forge:default-block"
+    }
   }
 }
