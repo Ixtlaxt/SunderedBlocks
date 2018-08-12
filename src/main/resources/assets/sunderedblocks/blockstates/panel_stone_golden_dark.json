@@ -1,7 +1,6 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "sunderedblocks:panel",
     "uvlock": true,
     "textures": {
       "edge": "sunderedblocks:blocks/stone/golden_dark_panel",
@@ -9,17 +8,50 @@
     }
   },
   "variants": {
-    "facing": {
-      "north": { "x": 90, "y": 180 },
-      "east":  { "x": 90, "y": 270 },
-      "south": { "x": 90 },
-      "west":  { "x": 90, "y": 90 },
-      "up":    { "x": 180 },
-      "down":  { "x": 0 }
-    },
-    "inventory": {
-      "transform": "forge:default-block"
+    "shape": {
+      "north": { "model": "sunderedblocks:panel", "x": 90, "y": 180 },
+      "east":  { "model": "sunderedblocks:panel", "x": 90, "y": 270 },
+      "south": { "model": "sunderedblocks:panel", "x": 90 },
+      "west":  { "model": "sunderedblocks:panel", "x": 90, "y": 90 },
+      "up":    { "model": "sunderedblocks:panel", "x": 180 },
+      "down":  { "model": "sunderedblocks:panel", "x": 0 },
+      "northwest":  {
+        "submodel": {
+          "north": { "uvlock": true, "model": "sunderedblocks:panel", "x": 90, "y": 180},
+          "west":  { "uvlock": true, "model": "sunderedblocks:panel_add", "x": 90, "y": 90 }
+        }},
+      "northeast":  {
+        "submodel": {
+          "north": { "uvlock": true, "model": "sunderedblocks:panel_add", "x": 90, "y": 180},
+          "east":  { "uvlock": true, "model": "sunderedblocks:panel", "x": 90, "y": 270 }
+        }},
+      "southwest":  {
+        "submodel": {
+          "south": { "uvlock": true, "model": "sunderedblocks:panel_add", "x": 90},
+          "west":  { "uvlock": true, "model": "sunderedblocks:panel", "x": 90, "y": 90 }
+        }},
+      "southeast":  {
+        "submodel": {
+          "south": { "uvlock": true, "model": "sunderedblocks:panel", "x": 90},
+          "east":  { "uvlock": true, "model": "sunderedblocks:panel_add", "x": 90, "y": 270 }
+
+        }},
+      "updown":  {
+        "submodel": {
+          "up":    { "uvlock": true, "model": "sunderedblocks:panel", "x": 180},
+          "down":  { "uvlock": true, "model": "sunderedblocks:panel" }
+        }},
+      "northsouth":  {
+        "submodel": {
+          "south": { "uvlock": true, "model": "sunderedblocks:panel", "x": 90},
+          "north": { "uvlock": true, "model": "sunderedblocks:panel", "x": 90, "y": 180}
+        }},
+      "eastwest":  {
+        "submodel": {
+          "west":  { "uvlock": true, "model": "sunderedblocks:panel", "x": 90, "y": 90 },
+          "east":  { "uvlock": true, "model": "sunderedblocks:panel", "x": 90, "y": 270 }
+
+        }}
     }
   }
 }
-

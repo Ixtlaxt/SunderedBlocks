@@ -53,6 +53,9 @@ public class CyanBlocks {
     public static BlockVertslab vertslabStoneCyanLight = new BlockVertslab("vertslab_stone_cyan_light");
     public static BlockModStairs stairsStoneCyanLight = new BlockModStairs(blockStoneCyanLightPanel.getDefaultState(), "stairs_stone_cyan_light");
 
+    public static ItemBlockPanel panelItemStoneCyanDark = new ItemBlockPanel(panelStoneCyanDark);
+    public static ItemBlockPanel panelItemStoneCyanLight = new ItemBlockPanel(panelStoneCyanLight);
+
 
     public static void register(){
 
@@ -109,6 +112,9 @@ public class CyanBlocks {
         vertslabStoneCyanLight.register();
         panelStoneCyanLight.register();
         stairsStoneCyanLight.register();
+
+        panelItemStoneCyanDark.register();
+        panelItemStoneCyanLight.register();
 
     }
 }

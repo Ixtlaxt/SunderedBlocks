@@ -53,6 +53,9 @@ public class YellowBlocks {
     public static BlockVertslab vertslabStoneYellowLight = new BlockVertslab("vertslab_stone_yellow_light");
     public static BlockModStairs stairsStoneYellowLight = new BlockModStairs(blockStoneYellowLightPanel.getDefaultState(), "stairs_stone_yellow_light");
 
+    public static ItemBlockPanel panelItemStoneYellowDark = new ItemBlockPanel(panelStoneYellowDark);
+    public static ItemBlockPanel panelItemStoneYellowLight = new ItemBlockPanel(panelStoneYellowLight);
+
 
     public static void register(){
 
@@ -109,6 +112,9 @@ public class YellowBlocks {
         vertslabStoneYellowLight.register();
         panelStoneYellowLight.register();
         stairsStoneYellowLight.register();
+
+        panelItemStoneYellowDark.register();
+        panelItemStoneYellowLight.register();
 
     }
 }

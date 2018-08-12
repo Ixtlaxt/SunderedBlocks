@@ -53,6 +53,9 @@ public class PurpleBlocks {
     public static BlockVertslab vertslabStonePurpleLight = new BlockVertslab("vertslab_stone_purple_light");
     public static BlockModStairs stairsStonePurpleLight = new BlockModStairs(blockStonePurpleLightPanel.getDefaultState(), "stairs_stone_purple_light");
 
+    public static ItemBlockPanel panelItemStonePurpleDark = new ItemBlockPanel(panelStonePurpleDark);
+    public static ItemBlockPanel panelItemStonePurpleLight = new ItemBlockPanel(panelStonePurpleLight);
+
 
     public static void register(){
 
@@ -109,6 +112,9 @@ public class PurpleBlocks {
         vertslabStonePurpleLight.register();
         panelStonePurpleLight.register();
         stairsStonePurpleLight.register();
+
+        panelItemStonePurpleDark.register();
+        panelItemStonePurpleLight.register();
 
     }
 }

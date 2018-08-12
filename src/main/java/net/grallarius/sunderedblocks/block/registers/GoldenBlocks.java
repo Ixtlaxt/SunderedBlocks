@@ -53,6 +53,9 @@ public class GoldenBlocks {
     public static BlockVertslab vertslabStoneGoldenLight = new BlockVertslab("vertslab_stone_golden_light");
     public static BlockModStairs stairsStoneGoldenLight = new BlockModStairs(blockStoneGoldenLightPanel.getDefaultState(), "stairs_stone_golden_light");
 
+    public static ItemBlockPanel panelItemStoneGoldenDark = new ItemBlockPanel(panelStoneGoldenDark);
+    public static ItemBlockPanel panelItemStoneGoldenLight = new ItemBlockPanel(panelStoneGoldenLight);
+
 
     public static void register(){
 
@@ -109,6 +112,9 @@ public class GoldenBlocks {
         vertslabStoneGoldenLight.register();
         panelStoneGoldenLight.register();
         stairsStoneGoldenLight.register();
+
+        panelItemStoneGoldenDark.register();
+        panelItemStoneGoldenLight.register();
 
     }
 }

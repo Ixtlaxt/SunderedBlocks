@@ -1,0 +1,12 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:panel",
+    "textures": {
+      "edge": "sunderedblocks:blocks/stone/cyan_dark_panel",
+      "face": "sunderedblocks:blocks/stone/cyan_dark_floor"
+    }
+  },
+  "variants": {
+    "inventory": {"transform": "forge:default-block"}
+  }
+}

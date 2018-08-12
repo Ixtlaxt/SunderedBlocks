@@ -53,6 +53,9 @@ public class RedBlocks {
     public static BlockVertslab vertslabStoneRedLight = new BlockVertslab("vertslab_stone_red_light");
     public static BlockModStairs stairsStoneRedLight = new BlockModStairs(blockStoneRedLightPanel.getDefaultState(), "stairs_stone_red_light");
 
+    public static ItemBlockPanel panelItemStoneRedDark = new ItemBlockPanel(panelStoneRedDark);
+    public static ItemBlockPanel panelItemStoneRedLight = new ItemBlockPanel(panelStoneRedLight);
+
 
     public static void register(){
 
@@ -109,6 +112,9 @@ public class RedBlocks {
         vertslabStoneRedLight.register();
         panelStoneRedLight.register();
         stairsStoneRedLight.register();
+
+        panelItemStoneRedDark.register();
+        panelItemStoneRedLight.register();
 
     }
 }
