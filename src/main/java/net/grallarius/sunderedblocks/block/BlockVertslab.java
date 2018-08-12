@@ -15,6 +15,8 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -83,58 +85,16 @@ public class BlockVertslab extends BlockBase{
     }
 
     @Override
-    @Deprecated
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-
-        if(state.getValue(SHAPE) == EnumShape.EDGE) {
-            switch (state.getValue(FACING)) {
-                case EAST:
-                    return NORTHEAST_AABB;
-                case SOUTH:
-                    return SOUTHEAST_AABB;
-                case WEST:
-                    return SOUTHWEST_AABB;
-                case NORTH:
-                default:
-                    return NORTHWEST_AABB;
-            }
-        }
-        else if(state.getValue(SHAPE) == EnumShape.EDGEFLIP) {
-            switch (state.getValue(FACING)) {
-                case EAST:
-                    return SOUTHEAST_AABB;
-                case SOUTH:
-                    return SOUTHWEST_AABB;
-                case WEST:
-                    return NORTHWEST_AABB;
-                case NORTH:
-                default:
-                    return NORTHEAST_AABB;
-            }
-        }
-        else {
-            switch (state.getValue(FACING)) {
-                case EAST:
-                    return EAST_AABB;
-                case SOUTH:
-                    return SOUTH_AABB;
-                case WEST:
-                    return WEST_AABB;
-                case NORTH:
-                default:
-                    return NORTH_AABB;
-            }
-        }
-    }
-
-    @Override
-    @Deprecated
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState) {
-        if (!isActualState) {
+    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState)
+    {
+        if (!isActualState)
+        {
             state = this.getActualState(state, worldIn, pos);
         }
-        for (AxisAlignedBB axisalignedbb : getCollisionBoxList(state)) {
-            super.addCollisionBoxToList(pos, entityBox, collidingBoxes, axisalignedbb);
+
+        for (AxisAlignedBB axisalignedbb : getCollisionBoxList(state))
+        {
+            addCollisionBoxToList(pos, entityBox, collidingBoxes, axisalignedbb);
         }
     }
 
@@ -143,13 +103,13 @@ public class BlockVertslab extends BlockBase{
         EnumShape shape = state.getValue(SHAPE);
 
 
-        if(shape != EnumShape.EDGE || shape != EnumShape.EDGEFLIP) {
+        if(shape != EnumShape.EDGE && shape != EnumShape.EDGEFLIP) {
             list.add(getSlabBB(state));
         }
         if(shape != EnumShape.SLAB) {
             list.add(getCornerBB(state));
         }
-
+        //System.out.println("getCollisionBoxList:- resulting list - " + list);
         return list;
     }
 
@@ -194,6 +154,40 @@ public class BlockVertslab extends BlockBase{
                 return NORTH_AABB;
         }
     }
+
+    /**
+     * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit.
+     */
+    @Nullable
+    public RayTraceResult collisionRayTrace(IBlockState blockState, World worldIn, BlockPos pos, Vec3d start, Vec3d end)
+    {
+        List<RayTraceResult> list = Lists.<RayTraceResult>newArrayList();
+
+        for (AxisAlignedBB axisalignedbb : getCollisionBoxList(this.getActualState(blockState, worldIn, pos)))
+        {
+            list.add(this.rayTrace(pos, start, end, axisalignedbb));
+        }
+
+        RayTraceResult raytraceresult1 = null;
+        double d1 = 0.0D;
+
+        for (RayTraceResult raytraceresult : list)
+        {
+            if (raytraceresult != null)
+            {
+                double d0 = raytraceresult.hitVec.squareDistanceTo(end);
+
+                if (d0 > d1)
+                {
+                    raytraceresult1 = raytraceresult;
+                    d1 = d0;
+                }
+            }
+        }
+
+        return raytraceresult1;
+    }
+
 
     @Override
     @Deprecated

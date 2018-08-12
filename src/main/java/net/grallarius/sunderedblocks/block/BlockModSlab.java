@@ -32,17 +32,6 @@ public class BlockModSlab extends BlockSlab {
         setCreativeTab(SunderedBlocks.ixTab);
     }
 
-/*    public BlockModSlab(Material materialIn, String name, Block block, SoundType sound) {
-        super(materialIn);
-        setRegistryName(name);
-        setUnlocalizedName(SunderedBlocks.MODID + "." + name);
-        this.setHardness(2.0F);
-        this.useNeighborBrightness = true;
-        this.doubleSlab = block;
-        this.setSoundType(sound);
-        setCreativeTab(SunderedBlocks.ixTab);
-    }*/
-
     public void register(Item item) {
 
 /*        ITEM_REGISTRY.register(item);

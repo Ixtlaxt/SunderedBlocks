@@ -46,10 +46,12 @@ public class BlueBlocks {
     public static ItemModSlab slabItemStoneBlueLightBrick = new ItemModSlab(slabStoneBlueLightBrick, slabDoubleStoneBlueLightBrick);
 
     public static BlockPanel panelStoneBlueDark = new BlockPanel("panel_stone_blue_dark");
+    public static ItemBlockPanel panelItemStoneBlueDark = new ItemBlockPanel(panelStoneBlueDark);
     public static BlockVertslab vertslabStoneBlueDark = new BlockVertslab("vertslab_stone_blue_dark");
     public static BlockModStairs stairsStoneBlueDark = new BlockModStairs(blockStoneBlueDarkPanel.getDefaultState(), "stairs_stone_blue_dark");
 
     public static BlockPanel panelStoneBlueLight = new BlockPanel("panel_stone_blue_light");
+    public static ItemBlockPanel panelItemStoneBlueLight = new ItemBlockPanel(panelStoneBlueLight);
     public static BlockVertslab vertslabStoneBlueLight = new BlockVertslab("vertslab_stone_blue_light");
     public static BlockModStairs stairsStoneBlueLight = new BlockModStairs(blockStoneBlueLightPanel.getDefaultState(), "stairs_stone_blue_light");
 
@@ -81,6 +83,7 @@ public class BlueBlocks {
 
         vertslabStoneBlueDark.register();
         panelStoneBlueDark.register();
+        panelItemStoneBlueDark.register();
         stairsStoneBlueDark.register();
 
         blockStoneBlueLight.register();
@@ -108,6 +111,7 @@ public class BlueBlocks {
 
         vertslabStoneBlueLight.register();
         panelStoneBlueLight.register();
+        panelItemStoneBlueLight.register();
         stairsStoneBlueLight.register();
 
     }
