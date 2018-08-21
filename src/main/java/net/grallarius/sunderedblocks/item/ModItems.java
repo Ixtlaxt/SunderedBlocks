@@ -7,10 +7,10 @@ public class ModItems {
 public static ItemSaw saw = new ItemSaw("saw");
 
     public static void preInit() {
-        /*saw.register();*/
+        saw.register();
     }
 
     public static void registerModels() {
-        /*saw.register();*/
+        saw.register();
     }
 }
