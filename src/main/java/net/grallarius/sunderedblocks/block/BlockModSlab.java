@@ -25,7 +25,7 @@ public class BlockModSlab extends BlockSlab {
         super(materialIn);
         this.name = name;
         setRegistryName(name);
-        setUnlocalizedName(SunderedBlocks.MODID + "." + name);
+        setUnlocalizedName(name);
         this.setHardness(2.0F);
         this.useNeighborBrightness = true;
         this.doubleSlab = block;
