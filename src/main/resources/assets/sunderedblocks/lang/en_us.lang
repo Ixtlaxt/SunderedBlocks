@@ -292,6 +292,32 @@ tile.block_sand_grey.name=Dark Sand
 tile.block_sand_tropic.name=Bright Sand
 tile.block_sand_white.name=White Sand
 
+tile.slab_vanilla_andesite.name=Polished Andesite Slab
+tile.slab_vanilla_diorite.name=Polished Diorite Slab
+tile.slab_vanilla_granite.name=Polished Granite Slab
+
+tile.stairs_vanilla_andesite.name=Polished Andesite Stairs
+tile.stairs_vanilla_diorite.name=Polished Diorite Stairs
+tile.stairs_vanilla_granite.name=Polished Granite Stairs
+
+tile.vertslab_vanilla_andesite.name=Polished Andesite Vertslab
+tile.vertslab_vanilla_diorite.name=Polished Diorite Vertslab
+tile.vertslab_vanilla_granite.name=Polished Granite Vertslab
+
+tile.vertslab_vanilla_wood_acacia.name=Acacia Plank Vertslab
+tile.vertslab_vanilla_wood_birch.name=Birch Plank Vertslab
+tile.vertslab_vanilla_wood_dark.name=Dark Oak Plank Vertslab
+tile.vertslab_vanilla_wood_jungle.name=Jungle Plank Vertslab
+tile.vertslab_vanilla_wood_oak.name=Oak Plank Vertslab
+tile.vertslab_vanilla_wood_spruce.name=Spruce Plank Vertslab
+
+tile.vertslab_vanilla_brick.name=Brick Vertslab
+tile.vertslab_vanilla_cobblestone.name=Cobblestone Vertslab
+tile.vertslab_vanilla_nether_brick.name=Nether Brick Vertslab
+tile.vertslab_vanilla_sandstone.name=Sandstone Vertslab
+tile.vertslab_vanilla_sandstone_red.name=Red Sandstone Vertslab
+tile.vertslab_vanilla_stonebrick.name=Stone Brick Vertslab
+
 tile.vertslab_test.name=Test Vertslab
 
 

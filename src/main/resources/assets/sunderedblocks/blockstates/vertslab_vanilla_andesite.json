@@ -1,0 +1,30 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:vertslab/vertslab",
+    "uvlock": true,
+    "textures": {
+      "top":    "blocks/stone_andesite_smooth",
+      "bottom": "blocks/stone_andesite_smooth",
+      "side":   "blocks/stone_andesite_smooth"
+    }
+  },
+  "variants": {
+    "facing": {
+      "north": { "y": 0 },
+      "east":  { "y": 90 },
+      "south": { "y": 180 },
+      "west":  { "y": 270 }
+    },
+    "shape": {
+      "slab":       { "model": "sunderedblocks:vertslab/vertslab" },
+      "corner":     { "model": "sunderedblocks:vertslab/vertslab_corner"},
+      "cornerflip": { "model": "sunderedblocks:vertslab/vertslab_cornerflip"},
+      "edge":       { "model": "sunderedblocks:vertslab/vertslab_edge" },
+      "edgeflip":   { "model": "sunderedblocks:vertslab/vertslab_edgeflip"}
+    },
+    "inventory": {
+      "transform": "forge:default-block"
+    }
+  }
+}

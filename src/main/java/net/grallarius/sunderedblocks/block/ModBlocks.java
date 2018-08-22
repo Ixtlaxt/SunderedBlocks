@@ -66,6 +66,8 @@ public class ModBlocks {
         WhiteBlocks.register();
         YellowBlocks.register();
 
+        VanillaExtras.register();
+
         blockSandBlack.register();
         blockSandBrown.register();
         blockSandGrey.register();

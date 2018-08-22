@@ -1,0 +1,15 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:sundered_half_slab",
+    "textures": {
+      "top":    "blocks/stone_granite_smooth",
+      "bottom": "blocks/stone_granite_smooth",
+      "side":   "blocks/stone_granite_smooth"
+    }
+  },
+  "variants": {
+    "half=bottom": { "model": "sunderedblocks:sundered_half_slab" },
+    "half=top": { "model": "sunderedblocks:sundered_upper_slab" },
+    "inventory": {"model": "sunderedblocks:sundered_half_slab"}
+  }
+}
