@@ -53,11 +53,11 @@ public class BlockVertslab extends BlockBase{
         return state.withProperty(SHAPE, shape);
     }
 
-    public static EnumShape getShape(IBlockState state, IBlockAccess world, BlockPos pos) {
+    public EnumShape getShape(IBlockState state, IBlockAccess world, BlockPos pos) {
 
         IBlockState front = world.getBlockState(pos.offset(state.getValue(FACING).getOpposite()));
 
-        if (front.getBlock() instanceof BlockVertslab && (state.getValue(FACING).getAxis() != front.getValue(FACING).getAxis())) {
+        if (front.getBlock() == this.getBlockState().getBlock() && (state.getValue(FACING).getAxis() != front.getValue(FACING).getAxis())) {
             if (state.getValue(FACING).rotateY()  == front.getValue(FACING)) {
                 return EnumShape.CORNERFLIP;
             }
@@ -66,7 +66,7 @@ public class BlockVertslab extends BlockBase{
 
         IBlockState back = world.getBlockState(pos.offset(state.getValue(FACING)));
 
-        if (back.getBlock() instanceof BlockVertslab && (state.getValue(FACING).getAxis() != back.getValue(FACING).getAxis())) {
+        if (back.getBlock() == this.getBlockState().getBlock() && (state.getValue(FACING).getAxis() != back.getValue(FACING).getAxis())) {
             if (state.getValue(FACING).rotateY()  == back.getValue(FACING)) {
                 return EnumShape.EDGEFLIP;
             }
