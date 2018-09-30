@@ -46,9 +46,11 @@ public class ModBlocks {
 //    public static ClothesLine clothesline = new ClothesLine();
 
     public static BlockMoss blockMoss1 = new BlockMoss("moss1");
-    public static BlockMoss blockMoss2 = new BlockMoss("moss2");
-    public static BlockMoss blockMoss3 = new BlockMoss("moss3");
-    public static BlockMoss blockMoss4 = new BlockMoss("moss4");
+//    public static BlockMoss blockMoss2 = new BlockMoss("moss2");
+//    public static BlockMoss blockMoss3 = new BlockMoss("moss3");
+//    public static BlockMoss blockMoss4 = new BlockMoss("moss4");
+
+
 
     public static BlockWorkbench workbench = new BlockWorkbench("block_workbench");
 
@@ -61,9 +63,13 @@ public class ModBlocks {
         blockTileRed.register();
 
         blockMoss1.register();
-        blockMoss2.register();
-        blockMoss3.register();
-        blockMoss4.register();
+//        blockMoss2.register();
+//        blockMoss3.register();
+//        blockMoss4.register();
+
+
+
+
 
 
         BlueBlocks.register();

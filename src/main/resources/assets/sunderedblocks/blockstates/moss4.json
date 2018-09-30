@@ -2,6 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "uvlock": true,
+    "model": "block",
     "textures": {
       "face": "sunderedblocks:blocks/moss4"
     }
@@ -33,8 +34,6 @@
       },
       "false": {}
     },
-    "inventory": {
-      "transform": "forge:default-block"
-    }
+    "inventory": { "model": "sunderedblocks:moss_item", "textures": { "layer0": "sunderedblocks:items/moss1_item"}}
   }
 }

@@ -3,7 +3,7 @@
   "defaults": {
     "uvlock": true,
     "textures": {
-      "face": "sunderedblocks:blocks/moss1"
+      "moss": "sunderedblocks:blocks/moss/moss11"
     }
   },
   "variants": {
@@ -33,8 +33,13 @@
       },
       "false": {}
     },
-    "inventory": {
-      "transform": "forge:default-block"
-    }
+    "maturity": {
+      "0": { "textures": { "moss": "sunderedblocks:blocks/moss/moss10", "one": "sunderedblocks:blocks/moss/moss10"}},
+      "1": { "textures": { "moss": "sunderedblocks:blocks/moss/moss11", "one": "sunderedblocks:blocks/moss/moss_glow_one"}},
+      "2": { "textures": { "moss": "sunderedblocks:blocks/moss/moss12", "one": "sunderedblocks:blocks/moss/moss_glow_one"}},
+      "3": { "textures": { "moss": "sunderedblocks:blocks/moss/moss13", "one": "sunderedblocks:blocks/moss/moss_glow_one"}},
+      "4": { "textures": { "moss": "sunderedblocks:blocks/moss/moss14", "one": "sunderedblocks:blocks/moss/moss_glow_one"}}
+    },
+    "inventory": { "model": "sunderedblocks:moss_item", "textures": { "layer0": "sunderedblocks:items/moss1_item"}}
   }
 }

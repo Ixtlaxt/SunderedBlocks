@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -220,6 +221,13 @@ public class BlockVertslab extends BlockBase{
 
     public int getMetaFromState(IBlockState state) {
         return state.getValue(FACING).getIndex();
+    }
+
+    @Deprecated
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        if(face == state.getValue(FACING)) return BlockFaceShape.SOLID;
+        return BlockFaceShape.UNDEFINED;
     }
 
     public enum EnumShape implements IStringSerializable {

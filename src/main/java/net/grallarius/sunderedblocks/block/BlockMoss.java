@@ -1,15 +1,21 @@
 package net.grallarius.sunderedblocks.block;
 
 import com.google.common.collect.Lists;
+import net.minecraft.block.Block;
+import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.properties.PropertyInteger;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
@@ -21,6 +27,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Random;
 
 import static net.grallarius.sunderedblocks.SunderedBlocks.BLOCK_REGISTRY;
 
@@ -32,6 +39,7 @@ public class BlockMoss extends BlockBase {
     public static final PropertyBool EAST  = PropertyBool.create("east");
     public static final PropertyBool SOUTH = PropertyBool.create("south");
     public static final PropertyBool WEST  = PropertyBool.create("west");
+    public static final PropertyInteger MATURITY = PropertyInteger.create("maturity", 0, 4);
 
     protected static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.0625D);
     protected static final AxisAlignedBB EAST_AABB =  new AxisAlignedBB(0.9375D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
@@ -42,21 +50,86 @@ public class BlockMoss extends BlockBase {
 
     public BlockMoss(String name){
         super(Material.PLANTS, name);
-        this.setLightLevel(0.3f);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(DOWN, true));
+        this.setLightLevel(0.1f);
+        this.setTickRandomly(true);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(MATURITY,0));
     }
 
     @Override
     @Deprecated
     public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
-        boolean up    = world.getBlockState(pos.offset(EnumFacing.UP)).isFullCube();
-        boolean down  = world.getBlockState(pos.offset(EnumFacing.DOWN)).isFullCube();
-        boolean north = world.getBlockState(pos.offset(EnumFacing.NORTH)).isFullCube();
-        boolean east  = world.getBlockState(pos.offset(EnumFacing.EAST)).isFullCube();
-        boolean south = world.getBlockState(pos.offset(EnumFacing.SOUTH)).isFullCube();
-        boolean west  = world.getBlockState(pos.offset(EnumFacing.WEST)).isFullCube();
+        boolean up    = isFaceSolid(world, pos, EnumFacing.UP);
+        boolean down  = isFaceSolid(world, pos, EnumFacing.DOWN);
+        boolean north = isFaceSolid(world, pos, EnumFacing.NORTH);
+        boolean east  = isFaceSolid(world, pos, EnumFacing.EAST);
+        boolean south = isFaceSolid(world, pos, EnumFacing.SOUTH);
+        boolean west  = isFaceSolid(world, pos, EnumFacing.WEST);
 
         return state.withProperty(UP, up).withProperty(DOWN, down).withProperty(NORTH, north).withProperty(EAST, east).withProperty(SOUTH, south).withProperty(WEST, west);
+    }
+
+    public boolean isFaceSolid(IBlockAccess world, BlockPos pos, EnumFacing facing){
+        return world.getBlockState(pos.offset(facing)).getBlockFaceShape(world, pos, facing.getOpposite()) == BlockFaceShape.SOLID;
+    }
+
+    public boolean canPlaceBlockAt(World world, BlockPos pos){
+        for (EnumFacing facing : EnumFacing.values()){
+            if(isFaceSolid(world, pos, facing)) return true;
+        }
+        return false;
+    }
+
+    public void updateTick(World world, BlockPos pos, IBlockState state, Random rand){
+
+        System.out.println("BlockMoss:updateTick - I'm ticking! " + pos);
+
+        if (rand.nextInt(2) == 0)
+        {
+            int i = 5;
+
+            for (BlockPos blockpos : BlockPos.getAllInBoxMutable(pos.add(-1, -1, -1), pos.add(1, 1, 1))){
+                if (world.getBlockState(blockpos).getBlock() == this){
+                    System.out.println("BlockMoss:updateTick - found moss at: " + blockpos);
+                    --i;
+                    if (i <= 0){
+                        System.out.println("BlockMoss:updateTick - Too many moss.");
+                        return;
+                    }
+                }
+            }
+
+            BlockPos blockpos1 = pos.add(rand.nextInt(2) -1, rand.nextInt(2) -1, rand.nextInt(2) -1);
+            System.out.println("BlockMoss:updateTick - attempting to add moss from " + pos + " to: " + blockpos1);
+
+            for (int k = 0; k < 4; ++k){
+                if (world.isAirBlock(blockpos1) && this.canPlaceBlockAt(world, blockpos1)){
+                    System.out.println("BlockMoss:updateTick - intermediate position selected: " + blockpos1);
+                    pos = blockpos1;
+                }
+                blockpos1 = pos.add(rand.nextInt(2) -1, rand.nextInt(2) -1, rand.nextInt(2) -1);
+            }
+
+            if (world.getBlockState(blockpos1).getBlock() == this.getBlockState().getBlock()){
+                IBlockState mossState = world.getBlockState(blockpos1);
+                if(mossState.getValue(MATURITY) < 3) {
+                    System.out.println("BlockMoss:updateTick - maturing moss at: " + blockpos1);
+                    world.setBlockState(blockpos1, mossState.withProperty(MATURITY, mossState.getValue(MATURITY) + 1));
+                }
+            }
+            else if (world.isAirBlock(blockpos1) && this.canPlaceBlockAt(world, blockpos1)){
+                System.out.println("BlockMoss:updateTick - added moss to: " + blockpos1);
+                world.setBlockState(blockpos1, this.getDefaultState());
+            }
+        }
+    }
+
+    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn, BlockPos fromPos) {
+        if (!canPlaceBlockAt(world, pos)) {
+            world.setBlockToAir(pos);
+            for (EnumFacing enumfacing : EnumFacing.values()) {
+                world.notifyNeighborsOfStateChange(pos.offset(enumfacing), this, false);
+            }
+        }
     }
 
     @Override
@@ -140,13 +213,35 @@ public class BlockMoss extends BlockBase {
         return false;
     }
 
+    @Override
+    public int getLightValue(IBlockState state){
+        return state.getValue(MATURITY) * 2;
+    }
+
+    @Override
+    public boolean isReplaceable(IBlockAccess blockAccess, BlockPos pos) {
+        return true;
+    }
+
     public int getMetaFromState(IBlockState state){
-        return 0;
+        return state.getValue(MATURITY);
+    }
+
+    @Override
+    @Deprecated
+    public IBlockState getStateFromMeta(int meta){
+        return this.getDefaultState().withProperty(MATURITY, meta);
+    }
+
+    @Deprecated
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return BlockFaceShape.UNDEFINED;
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[] {UP, DOWN, NORTH, EAST, SOUTH, WEST});
+        return new BlockStateContainer(this, new IProperty[] {UP, DOWN, NORTH, EAST, SOUTH, WEST, MATURITY});
     }
 
 }
