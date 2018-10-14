@@ -1,0 +1,13 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "sunderedblocks:sundered_half_slab",
+    "textures": {
+      "top":    "sunderedblocks:blocks/stone/golden_light_stone",
+      "bottom": "sunderedblocks:blocks/stone/golden_light_stone",
+      "side":   "sunderedblocks:blocks/stone/golden_light_stone"
+    }
+  },
+  "variants": {
+    "inventory": {"model": "sunderedblocks:sundered_half_slab"}
+  }
+}

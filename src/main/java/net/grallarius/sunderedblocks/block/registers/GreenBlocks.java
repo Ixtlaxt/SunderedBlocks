@@ -56,6 +56,20 @@ public class GreenBlocks {
     public static ItemBlockPanel panelItemStoneGreenDark = new ItemBlockPanel(panelStoneGreenDark);
     public static ItemBlockPanel panelItemStoneGreenLight = new ItemBlockPanel(panelStoneGreenLight);
 
+    public static BlockVertslab vertslabStoneGreenDarkRaw = new BlockVertslab("vertslab_stone_green_dark_raw");
+    public static BlockModStairs stairsStoneGreenDarkRaw = new BlockModStairs(blockStoneGreenDark.getDefaultState(), "stairs_stone_green_dark_raw");
+
+    public static BlockVertslab vertslabStoneGreenLightRaw = new BlockVertslab("vertslab_stone_green_dark_raw");
+    public static BlockModStairs stairsStoneGreenLightRaw = new BlockModStairs(blockStoneGreenLight.getDefaultState(), "stairs_stone_green_light_raw");
+
+
+    public static BlockModDoubleSlab slabDoubleStoneGreenDarkRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_green_dark_raw_double");
+    public static BlockModSlab slabStoneGreenDarkRaw = new BlockModSlab(Material.ROCK,"slab_stone_green_dark_raw", slabDoubleStoneGreenDarkRaw);
+    public static ItemModSlab slabItemStoneGreenDarkRaw = new ItemModSlab(slabStoneGreenDarkRaw, slabDoubleStoneGreenDarkRaw);
+
+    public static BlockModDoubleSlab slabDoubleStoneGreenLightRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_green_light_raw_double");
+    public static BlockModSlab slabStoneGreenLightRaw = new BlockModSlab(Material.ROCK,"slab_stone_green_light_raw", slabDoubleStoneGreenLightRaw);
+    public static ItemModSlab slabItemStoneGreenLightRaw = new ItemModSlab(slabStoneGreenLightRaw, slabDoubleStoneGreenLightRaw);
 
     public static void register(){
 
@@ -115,6 +129,16 @@ public class GreenBlocks {
 
         panelItemStoneGreenDark.register();
         panelItemStoneGreenLight.register();
+
+        slabStoneGreenLightRaw.register();
+        slabDoubleStoneGreenLightRaw.register();
+        slabDoubleStoneGreenLightRaw.setSlab(slabStoneGreenLightRaw);
+        slabItemStoneGreenLightRaw.register();
+
+        stairsStoneGreenDarkRaw.register();
+        vertslabStoneGreenDarkRaw.register();
+        stairsStoneGreenLightRaw.register();
+        vertslabStoneGreenLightRaw.register();
 
     }
 }

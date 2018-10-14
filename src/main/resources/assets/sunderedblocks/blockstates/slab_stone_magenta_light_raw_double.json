@@ -1,0 +1,15 @@
+{"forge_marker": 1,
+  "defaults": {
+    "model": "cube_bottom_top",
+    "textures": {
+      "top":    "sunderedblocks:blocks/stone/magenta_light_stone",
+      "bottom": "sunderedblocks:blocks/stone/magenta_light_stone",
+      "side":   "sunderedblocks:blocks/stone/magenta_light_stone"
+    }
+  },
+  "variants": {
+    "half=bottom": { "model": "cube_bottom_top" },
+    "half=top": { "model": "cube_bottom_top" },
+    "inventory": {"model": "cube_bottom_top" }
+  }
+}

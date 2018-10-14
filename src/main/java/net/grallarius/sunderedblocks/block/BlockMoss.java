@@ -83,7 +83,7 @@ public class BlockMoss extends BlockBase {
 
         System.out.println("BlockMoss:updateTick - I'm ticking! " + pos);
 
-        if (rand.nextInt(2) == 0)
+        if (rand.nextInt(20) == 0)
         {
             int i = 5;
 
@@ -127,7 +127,7 @@ public class BlockMoss extends BlockBase {
         if (!canPlaceBlockAt(world, pos)) {
             world.setBlockToAir(pos);
             for (EnumFacing enumfacing : EnumFacing.values()) {
-                world.notifyNeighborsOfStateChange(pos.offset(enumfacing), this, false);
+                world.notifyNeighborsOfStateChange(pos.offset(enumfacing), this,  false);
             }
         }
     }
@@ -151,23 +151,27 @@ public class BlockMoss extends BlockBase {
         }
     }
 
+
+    /**
+     * Simply returns a list of bounding boxes based on the collision box list
+     */
     private static List<AxisAlignedBB> getCollisionBoxList(IBlockState state){
         List<AxisAlignedBB> list = Lists.<AxisAlignedBB>newArrayList();
-        if(state.getValue(DOWN))       {list.add(DOWN_AABB);}
-        else if(state.getValue(NORTH)) {list.add(NORTH_AABB);}
-        else if(state.getValue(EAST))  {list.add(EAST_AABB);}
-        else if(state.getValue(SOUTH)) {list.add(SOUTH_AABB);}
-        else if(state.getValue(WEST))  {list.add(WEST_AABB);}
-        else if(state.getValue(UP))    {list.add(UP_AABB);}
+        if(state.getValue(DOWN))  {list.add(DOWN_AABB);}
+        if(state.getValue(NORTH)) {list.add(NORTH_AABB);}
+        if(state.getValue(EAST))  {list.add(EAST_AABB);}
+        if(state.getValue(SOUTH)) {list.add(SOUTH_AABB);}
+        if(state.getValue(WEST))  {list.add(WEST_AABB);}
+        if(state.getValue(UP))    {list.add(UP_AABB);}
         return list;
     }
 
     /**
      * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit.
+     * Makes it so the block is only selected when the cursor is pointing at a part of the block.
      */
     @Nullable
-    public RayTraceResult collisionRayTrace(IBlockState blockState, World worldIn, BlockPos pos, Vec3d start, Vec3d end)
-    {
+    public RayTraceResult collisionRayTrace(IBlockState blockState, World worldIn, BlockPos pos, Vec3d start, Vec3d end){
         List<RayTraceResult> list = Lists.<RayTraceResult>newArrayList();
 
         for (AxisAlignedBB axisalignedbb : getCollisionBoxList(this.getActualState(blockState, worldIn, pos)))

@@ -37,7 +37,9 @@ tile.slab_stone_blue_dark_floor.name=Sterist Tile Slab
 tile.slab_stone_blue_dark_brick.name=Sterist Brick Slab
 tile.vertslab_stone_blue_dark.name=Sterist Vertical Slab
 tile.panel_stone_blue_dark.name=Sterist Panel
-tile.stairs_stone_blue_dark.name=Sterist Stairs
+tile.stairs_stone_blue_dark.name=Sterist Brick Stairs
+tile.stairs_stone_blue_dark_raw.name=Sterist Stairs
+
 
 tile.block_stone_blue_light.name=Pale Sterist
 tile.block_stone_blue_light_brick.name=Pale Sterist Bricks
@@ -50,7 +52,9 @@ tile.slab_stone_blue_light_floor.name=Pale Sterist Tile Slab
 tile.slab_stone_blue_light_brick.name=Pale Sterist Brick Slab
 tile.vertslab_stone_blue_light.name=Pale Sterist Vertical Slab
 tile.panel_stone_blue_light.name=Pale Sterist Panel
-tile.stairs_stone_blue_light.name=Pale Sterist Stairs
+tile.stairs_stone_blue_light.name=Pale Sterist Brick Stairs
+tile.stairs_stone_blue_light_raw.name=Pale Sterist Stairs
+
 
 tile.block_stone_brown_dark.name=Balk
 tile.block_stone_brown_dark_brick.name=Balk Bricks
@@ -63,7 +67,9 @@ tile.slab_stone_brown_dark_floor.name=Balk Tile Slab
 tile.slab_stone_brown_dark_brick.name=Balk Brick Slab
 tile.vertslab_stone_brown_dark.name=Balk Vertical Slab
 tile.panel_stone_brown_dark.name=Balk Panel
-tile.stairs_stone_brown_dark.name=Balk Stairs
+tile.stairs_stone_brown_dark.name=Balk Brick Stairs
+tile.stairs_stone_brown_dark_raw.name=Balk Stairs
+
 
 tile.block_stone_brown_light.name=Pale Balk
 tile.block_stone_brown_light_brick.name=Pale Balk Bricks
@@ -76,7 +82,9 @@ tile.slab_stone_brown_light_floor.name=Pale Balk Tile Slab
 tile.slab_stone_brown_light_brick.name=Pale Balk Brick Slab
 tile.vertslab_stone_brown_light.name=Pale Balk Vertical Slab
 tile.panel_stone_brown_light.name=Pale Balk Panel
-tile.stairs_stone_brown_light.name=Pale Balk Stairs
+tile.stairs_stone_brown_light.name=Pale Balk Brick Stairs
+tile.stairs_stone_brown_light_raw.name=Pale Balk Stairs
+
 
 tile.block_stone_cyan_dark.name=Aspile
 tile.block_stone_cyan_dark_brick.name=Aspile Bricks
@@ -89,7 +97,9 @@ tile.slab_stone_cyan_dark_floor.name=Aspile Tile Slab
 tile.slab_stone_cyan_dark_brick.name=Aspile Brick Slab
 tile.vertslab_stone_cyan_dark.name=Aspile Vertical Slab
 tile.panel_stone_cyan_dark.name=Aspile Panel
-tile.stairs_stone_cyan_dark.name=Aspile Stairs
+tile.stairs_stone_cyan_dark.name=Aspile Brick Stairs
+tile.stairs_stone_cyan_dark_raw.name=Aspile Stairs
+
 
 tile.block_stone_cyan_light.name=Pale Aspile
 tile.block_stone_cyan_light_brick.name=Pale Aspile Bricks
@@ -102,7 +112,9 @@ tile.slab_stone_cyan_light_floor.name=Pale Aspile Tile Slab
 tile.slab_stone_cyan_light_brick.name=Pale Aspile Brick Slab
 tile.vertslab_stone_cyan_light.name=Pale Aspile Vertical Slab
 tile.panel_stone_cyan_light.name=Pale Aspile Panel
-tile.stairs_stone_cyan_light.name=Pale Aspile Stairs
+tile.stairs_stone_cyan_light.name=Pale Aspile Brick Stairs
+tile.stairs_stone_cyan_light_raw.name=Pale Aspile Stairs
+
 
 tile.block_stone_golden_dark.name=Linggot
 tile.block_stone_golden_dark_brick.name=Linggot Bricks
@@ -115,7 +127,9 @@ tile.slab_stone_golden_dark_floor.name=Linggot Tile Slab
 tile.slab_stone_golden_dark_brick.name=Linggot Brick Slab
 tile.vertslab_stone_golden_dark.name=Linggot Vertical Slab
 tile.panel_stone_golden_dark.name=Linggot Panel
-tile.stairs_stone_golden_dark.name=Linggot Stairs
+tile.stairs_stone_golden_dark.name=Linggot Brick Stairs
+tile.stairs_stone_golden_dark_raw.name=Linggot Stairs
+
 
 tile.block_stone_golden_light.name=Pale Linggot
 tile.block_stone_golden_light_brick.name=Pale Linggot Bricks
@@ -128,7 +142,9 @@ tile.slab_stone_golden_light_floor.name=Pale Linggot Tile Slab
 tile.slab_stone_golden_light_brick.name=Pale Linggot Brick Slab
 tile.vertslab_stone_golden_light.name=Pale Linggot Vertical Slab
 tile.panel_stone_golden_light.name=Pale Linggot Panel
-tile.stairs_stone_golden_light.name=Pale Linggot Stairs
+tile.stairs_stone_golden_light.name=Pale Linggot Brick Stairs
+tile.stairs_stone_golden_light_raw.name=Pale Linggot Stairs
+
 
 tile.block_stone_green_dark.name=Spartine
 tile.block_stone_green_dark_brick.name=Spartine Bricks
@@ -141,7 +157,9 @@ tile.slab_stone_green_dark_floor.name=Spartine Tile Slab
 tile.slab_stone_green_dark_brick.name=Spartine Brick Slab
 tile.vertslab_stone_green_dark.name=Spartine Vertical Slab
 tile.panel_stone_green_dark.name=Spartine Panel
-tile.stairs_stone_green_dark.name=Spartine Stairs
+tile.stairs_stone_green_dark.name=Spartine Brick Stairs
+tile.stairs_stone_green_dark_raw.name=Spartine Stairs
+
 
 tile.block_stone_green_light.name=Pale Spartine
 tile.block_stone_green_light_brick.name=Pale Spartine Bricks
@@ -154,7 +172,9 @@ tile.slab_stone_green_light_floor.name=Pale Spartine Tile Slab
 tile.slab_stone_green_light_brick.name=Pale Spartine Brick Slab
 tile.vertslab_stone_green_light.name=Pale Spartine Vertical Slab
 tile.panel_stone_green_light.name=Pale Spartine Panel
-tile.stairs_stone_green_light.name=Pale Spartine Stairs
+tile.stairs_stone_green_light.name=Pale Spartine Brick Stairs
+tile.stairs_stone_green_light_raw.name=Pale Spartine Stairs
+
 
 tile.block_stone_magenta_dark.name=Aventar
 tile.block_stone_magenta_dark_brick.name=Aventar Bricks
@@ -167,7 +187,9 @@ tile.slab_stone_magenta_dark_floor.name=Aventar Tile Slab
 tile.slab_stone_magenta_dark_brick.name=Aventar Brick Slab
 tile.vertslab_stone_magenta_dark.name=Aventar Vertical Slab
 tile.panel_stone_magenta_dark.name=Aventar Panel
-tile.stairs_stone_magenta_dark.name=Aventar Stairs
+tile.stairs_stone_magenta_dark.name=Aventar Brick Stairs
+tile.stairs_stone_magenta_dark_raw.name=Aventar Stairs
+
 
 tile.block_stone_magenta_light.name=Pale Aventar
 tile.block_stone_magenta_light_brick.name=Pale Aventar Bricks
@@ -180,7 +202,9 @@ tile.slab_stone_magenta_light_floor.name=Pale Aventar Tile Slab
 tile.slab_stone_magenta_light_brick.name=Pale Aventar Brick Slab
 tile.vertslab_stone_magenta_light.name=Pale Aventar Vertical Slab
 tile.panel_stone_magenta_light.name=Pale Aventar Panel
-tile.stairs_stone_magenta_light.name=Pale Aventar Stairs
+tile.stairs_stone_magenta_light.name=Pale Aventar Brick Stairs
+tile.stairs_stone_magenta_light_raw.name=Pale Aventar Stairs
+
 
 tile.block_stone_purple_dark.name=Gargrave
 tile.block_stone_purple_dark_brick.name=Gargrave Bricks
@@ -193,7 +217,9 @@ tile.slab_stone_purple_dark_floor.name=Gargrave Tile Slab
 tile.slab_stone_purple_dark_brick.name=Gargrave Brick Slab
 tile.vertslab_stone_purple_dark.name=Gargrave Vertical Slab
 tile.panel_stone_purple_dark.name=Gargrave Panel
-tile.stairs_stone_purple_dark.name=Gargrave Stairs
+tile.stairs_stone_purple_dark.name=Gargrave Brick Stairs
+tile.stairs_stone_purple_dark_raw.name=Gargrave Stairs
+
 
 tile.block_stone_purple_light.name=Pale Gargrave
 tile.block_stone_purple_light_brick.name=Pale Gargrave Bricks
@@ -206,7 +232,9 @@ tile.slab_stone_purple_light_floor.name=Pale Gargrave Tile Slab
 tile.slab_stone_purple_light_brick.name=Pale Gargrave Brick Slab
 tile.vertslab_stone_purple_light.name=Pale Gargrave Vertical Slab
 tile.panel_stone_purple_light.name=Pale Gargrave Panel
-tile.stairs_stone_purple_light.name=Pale Gargrave Stairs
+tile.stairs_stone_purple_light.name=Pale Gargrave Brick Stairs
+tile.stairs_stone_purple_light_raw.name=Pale Gargrave Stairs
+
 
 tile.block_stone_red_dark.name=Rhodian
 tile.block_stone_red_dark_brick.name=Rhodian Bricks
@@ -219,7 +247,9 @@ tile.slab_stone_red_dark_floor.name=Rhodian Tile Slab
 tile.slab_stone_red_dark_brick.name=Rhodian Brick Slab
 tile.vertslab_stone_red_dark.name=Rhodian Vertical Slab
 tile.panel_stone_red_dark.name=Rhodian Panel
-tile.stairs_stone_red_dark.name=Rhodian Stairs
+tile.stairs_stone_red_dark.name=Rhodian Brick Stairs
+tile.stairs_stone_red_dark_raw.name=Rhodian Stairs
+
 
 tile.block_stone_red_light.name=Pale Rhodian
 tile.block_stone_red_light_brick.name=Pale Rhodian Bricks
@@ -232,7 +262,9 @@ tile.slab_stone_red_light_floor.name=Pale Rhodian Tile Slab
 tile.slab_stone_red_light_brick.name=Pale Rhodian Brick Slab
 tile.vertslab_stone_red_light.name=Pale Rhodian Vertical Slab
 tile.panel_stone_red_light.name=Pale Rhodian Panel
-tile.stairs_stone_red_light.name=Pale Rhodian Stairs
+tile.stairs_stone_red_light.name=Pale Rhodian Brick Stairs
+tile.stairs_stone_red_light_raw.name=Pale Rhodian Stairs
+
 
 tile.block_stone_white_dark.name=Umberlite
 tile.block_stone_white_dark_brick.name=Umberlite Bricks
@@ -245,7 +277,9 @@ tile.slab_stone_white_dark_floor.name=Umberlite Tile Slab
 tile.slab_stone_white_dark_brick.name=Umberlite Brick Slab
 tile.vertslab_stone_white_dark.name=Umberlite Vertical Slab
 tile.panel_stone_white_dark.name=Umberlite Panel
-tile.stairs_stone_white_dark.name=Umberlite Stairs
+tile.stairs_stone_white_dark.name=Umberlite Brick Stairs
+tile.stairs_stone_white_dark_raw.name=Umberlite Stairs
+
 
 tile.block_stone_white_light.name=Pale Umberlite
 tile.block_stone_white_light_brick.name=Pale Umberlite Bricks
@@ -258,7 +292,9 @@ tile.slab_stone_white_light_floor.name=Pale Umberlite Tile Slab
 tile.slab_stone_white_light_brick.name=Pale Umberlite Brick Slab
 tile.vertslab_stone_white_light.name=Pale Umberlite Vertical Slab
 tile.panel_stone_white_light.name=Pale Umberlite Panel
-tile.stairs_stone_white_light.name=Pale Umberlite Stairs
+tile.stairs_stone_white_light.name=Pale Umberlite Brick Stairs
+tile.stairs_stone_white_light_raw.name=Pale Umberlite Stairs
+
 
 tile.block_stone_yellow_dark.name=Clarate
 tile.block_stone_yellow_dark_brick.name=Clarate Bricks
@@ -271,7 +307,9 @@ tile.slab_stone_yellow_dark_floor.name=Clarate Tile Slab
 tile.slab_stone_yellow_dark_brick.name=Clarate Brick Slab
 tile.vertslab_stone_yellow_dark.name=Clarate Vertical Slab
 tile.panel_stone_yellow_dark.name=Clarate Panel
-tile.stairs_stone_yellow_dark.name=Clarate Stairs
+tile.stairs_stone_yellow_dark.name=Clarate Brick Stairs
+tile.stairs_stone_yellow_dark_raw.name=Clarate Stairs
+
 
 tile.block_stone_yellow_light.name=Pale Clarate
 tile.block_stone_yellow_light_brick.name=Pale Clarate Bricks
@@ -284,7 +322,9 @@ tile.slab_stone_yellow_light_floor.name=Pale Clarate Tile Slab
 tile.slab_stone_yellow_light_brick.name=Pale Clarate Brick Slab
 tile.vertslab_stone_yellow_light.name=Pale Clarate Vertical Slab
 tile.panel_stone_yellow_light.name=Pale Clarate Panel
-tile.stairs_stone_yellow_light.name=Pale Clarate Stairs
+tile.stairs_stone_yellow_light.name=Pale Clarate Brick Stairs
+tile.stairs_stone_yellow_light_raw.name=Pale Clarate Stairs
+
 
 tile.block_sand_black.name=Black Sand
 tile.block_sand_brown.name=Brown Sand
@@ -319,6 +359,8 @@ tile.vertslab_vanilla_sandstone_red.name=Red Sandstone Vertslab
 tile.vertslab_vanilla_stonebrick.name=Stone Brick Vertslab
 
 tile.vertslab_test.name=Test Vertslab
+
+tile.moss1.name=Glowmoss
 
 
 tile.clothesline.name=Clothesline

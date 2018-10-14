@@ -56,6 +56,20 @@ public class MagentaBlocks {
     public static ItemBlockPanel panelItemStoneMagentaDark = new ItemBlockPanel(panelStoneMagentaDark);
     public static ItemBlockPanel panelItemStoneMagentaLight = new ItemBlockPanel(panelStoneMagentaLight);
 
+    public static BlockVertslab vertslabStoneMagentaDarkRaw = new BlockVertslab("vertslab_stone_magenta_dark_raw");
+    public static BlockModStairs stairsStoneMagentaDarkRaw = new BlockModStairs(blockStoneMagentaDark.getDefaultState(), "stairs_stone_magenta_dark_raw");
+
+    public static BlockVertslab vertslabStoneMagentaLightRaw = new BlockVertslab("vertslab_stone_magenta_dark_raw");
+    public static BlockModStairs stairsStoneMagentaLightRaw = new BlockModStairs(blockStoneMagentaLight.getDefaultState(), "stairs_stone_magenta_light_raw");
+
+
+    public static BlockModDoubleSlab slabDoubleStoneMagentaDarkRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_magenta_dark_raw_double");
+    public static BlockModSlab slabStoneMagentaDarkRaw = new BlockModSlab(Material.ROCK,"slab_stone_magenta_dark_raw", slabDoubleStoneMagentaDarkRaw);
+    public static ItemModSlab slabItemStoneMagentaDarkRaw = new ItemModSlab(slabStoneMagentaDarkRaw, slabDoubleStoneMagentaDarkRaw);
+
+    public static BlockModDoubleSlab slabDoubleStoneMagentaLightRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_magenta_light_raw_double");
+    public static BlockModSlab slabStoneMagentaLightRaw = new BlockModSlab(Material.ROCK,"slab_stone_magenta_light_raw", slabDoubleStoneMagentaLightRaw);
+    public static ItemModSlab slabItemStoneMagentaLightRaw = new ItemModSlab(slabStoneMagentaLightRaw, slabDoubleStoneMagentaLightRaw);
 
     public static void register(){
 
@@ -115,6 +129,16 @@ public class MagentaBlocks {
 
         panelItemStoneMagentaDark.register();
         panelItemStoneMagentaLight.register();
+
+        slabStoneMagentaLightRaw.register();
+        slabDoubleStoneMagentaLightRaw.register();
+        slabDoubleStoneMagentaLightRaw.setSlab(slabStoneMagentaLightRaw);
+        slabItemStoneMagentaLightRaw.register();
+
+        stairsStoneMagentaDarkRaw.register();
+        vertslabStoneMagentaDarkRaw.register();
+        stairsStoneMagentaLightRaw.register();
+        vertslabStoneMagentaLightRaw.register();
 
     }
 }

@@ -56,6 +56,21 @@ public class RedBlocks {
     public static ItemBlockPanel panelItemStoneRedDark = new ItemBlockPanel(panelStoneRedDark);
     public static ItemBlockPanel panelItemStoneRedLight = new ItemBlockPanel(panelStoneRedLight);
 
+    public static BlockVertslab vertslabStoneRedDarkRaw = new BlockVertslab("vertslab_stone_red_dark_raw");
+    public static BlockModStairs stairsStoneRedDarkRaw = new BlockModStairs(blockStoneRedDark.getDefaultState(), "stairs_stone_red_dark_raw");
+
+    public static BlockVertslab vertslabStoneRedLightRaw = new BlockVertslab("vertslab_stone_red_dark_raw");
+    public static BlockModStairs stairsStoneRedLightRaw = new BlockModStairs(blockStoneRedLight.getDefaultState(), "stairs_stone_red_light_raw");
+
+
+    public static BlockModDoubleSlab slabDoubleStoneRedDarkRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_red_dark_raw_double");
+    public static BlockModSlab slabStoneRedDarkRaw = new BlockModSlab(Material.ROCK,"slab_stone_red_dark_raw", slabDoubleStoneRedDarkRaw);
+    public static ItemModSlab slabItemStoneRedDarkRaw = new ItemModSlab(slabStoneRedDarkRaw, slabDoubleStoneRedDarkRaw);
+
+    public static BlockModDoubleSlab slabDoubleStoneRedLightRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_red_light_raw_double");
+    public static BlockModSlab slabStoneRedLightRaw = new BlockModSlab(Material.ROCK,"slab_stone_red_light_raw", slabDoubleStoneRedLightRaw);
+    public static ItemModSlab slabItemStoneRedLightRaw = new ItemModSlab(slabStoneRedLightRaw, slabDoubleStoneRedLightRaw);
+
 
     public static void register(){
 
@@ -115,6 +130,16 @@ public class RedBlocks {
 
         panelItemStoneRedDark.register();
         panelItemStoneRedLight.register();
+
+        slabStoneRedLightRaw.register();
+        slabDoubleStoneRedLightRaw.register();
+        slabDoubleStoneRedLightRaw.setSlab(slabStoneRedLightRaw);
+        slabItemStoneRedLightRaw.register();
+
+        stairsStoneRedDarkRaw.register();
+        vertslabStoneRedDarkRaw.register();
+        stairsStoneRedLightRaw.register();
+        vertslabStoneRedLightRaw.register();
 
     }
 }

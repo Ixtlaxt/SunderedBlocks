@@ -1,0 +1,37 @@
+{ "parent": "block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "#leaves"
+  },
+  "elements": [
+    { "from": [ 0, 0, 0 ],
+      "to": [ 16, 8, 16 ],
+      "faces": {
+        "down":  { "texture": "#leaves", "cullface": "down" },
+        "up":    { "texture": "#leaves" },
+        "north": { "texture": "#leaves" },
+        "south": { "texture": "#leaves" },
+        "west":  { "texture": "#leaves" },
+        "east":  { "texture": "#leaves" }
+      }
+    },
+    {   "from": [ -1, -1, 8 ],
+      "to": [ 17, 17, 8 ],
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": true },
+      "shade": false,
+      "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" }
+      }
+    },
+    {   "from": [ 8, -1, -1 ],
+      "to": [ 8, 17, 17 ],
+      "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45, "rescale": true },
+      "shade": false,
+      "faces": {
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" },
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" }
+      }
+    }
+  ]
+}

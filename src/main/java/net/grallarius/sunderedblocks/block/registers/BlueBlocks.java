@@ -50,6 +50,21 @@ public class BlueBlocks {
     public static BlockVertslab vertslabStoneBlueDark = new BlockVertslab("vertslab_stone_blue_dark");
     public static BlockModStairs stairsStoneBlueDark = new BlockModStairs(blockStoneBlueDarkPanel.getDefaultState(), "stairs_stone_blue_dark");
 
+    public static BlockVertslab vertslabStoneBlueDarkRaw = new BlockVertslab("vertslab_stone_blue_dark_raw");
+    public static BlockModStairs stairsStoneBlueDarkRaw = new BlockModStairs(blockStoneBlueDark.getDefaultState(), "stairs_stone_blue_dark_raw");
+
+    public static BlockVertslab vertslabStoneBlueLightRaw = new BlockVertslab("vertslab_stone_blue_dark_raw");
+    public static BlockModStairs stairsStoneBlueLightRaw = new BlockModStairs(blockStoneBlueLight.getDefaultState(), "stairs_stone_blue_light_raw");
+
+
+    public static BlockModDoubleSlab slabDoubleStoneBlueDarkRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_blue_dark_raw_double");
+    public static BlockModSlab slabStoneBlueDarkRaw = new BlockModSlab(Material.ROCK,"slab_stone_blue_dark_raw", slabDoubleStoneBlueDarkRaw);
+    public static ItemModSlab slabItemStoneBlueDarkRaw = new ItemModSlab(slabStoneBlueDarkRaw, slabDoubleStoneBlueDarkRaw);
+
+    public static BlockModDoubleSlab slabDoubleStoneBlueLightRaw = new BlockModDoubleSlab(Material.ROCK, "slab_stone_blue_light_raw_double");
+    public static BlockModSlab slabStoneBlueLightRaw = new BlockModSlab(Material.ROCK,"slab_stone_blue_light_raw", slabDoubleStoneBlueLightRaw);
+    public static ItemModSlab slabItemStoneBlueLightRaw = new ItemModSlab(slabStoneBlueLightRaw, slabDoubleStoneBlueLightRaw);
+
     public static BlockPanel panelStoneBlueLight = new BlockPanel("panel_stone_blue_light");
     public static ItemBlockPanel panelItemStoneBlueLight = new ItemBlockPanel(panelStoneBlueLight);
     public static BlockVertslab vertslabStoneBlueLight = new BlockVertslab("vertslab_stone_blue_light");
@@ -85,6 +100,21 @@ public class BlueBlocks {
         panelStoneBlueDark.register();
         panelItemStoneBlueDark.register();
         stairsStoneBlueDark.register();
+
+        slabStoneBlueDarkRaw.register();
+        slabDoubleStoneBlueDarkRaw.register();
+        slabDoubleStoneBlueDarkRaw.setSlab(slabStoneBlueDarkRaw);
+        slabItemStoneBlueDarkRaw.register();
+
+        slabStoneBlueLightRaw.register();
+        slabDoubleStoneBlueLightRaw.register();
+        slabDoubleStoneBlueLightRaw.setSlab(slabStoneBlueLightRaw);
+        slabItemStoneBlueLightRaw.register();
+
+        stairsStoneBlueDarkRaw.register();
+        vertslabStoneBlueDarkRaw.register();
+        stairsStoneBlueLightRaw.register();
+        vertslabStoneBlueLightRaw.register();
 
         blockStoneBlueLight.register();
         blockStoneBlueLightBrick.register();

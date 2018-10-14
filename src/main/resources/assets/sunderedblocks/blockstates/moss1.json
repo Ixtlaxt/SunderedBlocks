@@ -40,6 +40,6 @@
       "3": { "textures": { "moss": "sunderedblocks:blocks/moss/moss13", "one": "sunderedblocks:blocks/moss/moss_glow_one"}},
       "4": { "textures": { "moss": "sunderedblocks:blocks/moss/moss14", "one": "sunderedblocks:blocks/moss/moss_glow_one"}}
     },
-    "inventory": { "model": "sunderedblocks:moss_item", "textures": { "layer0": "sunderedblocks:items/moss1_item"}}
+    "inventory": { "model": "sunderedblocks:moss_item", "textures": { "moss": "sunderedblocks:items/moss1_item"}}
   }
 }

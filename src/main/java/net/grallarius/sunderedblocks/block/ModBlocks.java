@@ -46,6 +46,8 @@ public class ModBlocks {
 //    public static ClothesLine clothesline = new ClothesLine();
 
     public static BlockMoss blockMoss1 = new BlockMoss("moss1");
+
+    public static BlockShrub blockShrub = new BlockShrub("shrub_red");
 //    public static BlockMoss blockMoss2 = new BlockMoss("moss2");
 //    public static BlockMoss blockMoss3 = new BlockMoss("moss3");
 //    public static BlockMoss blockMoss4 = new BlockMoss("moss4");
@@ -63,6 +65,7 @@ public class ModBlocks {
         blockTileRed.register();
 
         blockMoss1.register();
+        blockShrub.register();
 //        blockMoss2.register();
 //        blockMoss3.register();
 //        blockMoss4.register();
