@@ -59,7 +59,7 @@ public class GreenBlocks {
     public static BlockVertslab vertslabStoneGreenDarkRaw = new BlockVertslab("vertslab_stone_green_dark_raw");
     public static BlockModStairs stairsStoneGreenDarkRaw = new BlockModStairs(blockStoneGreenDark.getDefaultState(), "stairs_stone_green_dark_raw");
 
-    public static BlockVertslab vertslabStoneGreenLightRaw = new BlockVertslab("vertslab_stone_green_dark_raw");
+    public static BlockVertslab vertslabStoneGreenLightRaw = new BlockVertslab("vertslab_stone_green_light_raw");
     public static BlockModStairs stairsStoneGreenLightRaw = new BlockModStairs(blockStoneGreenLight.getDefaultState(), "stairs_stone_green_light_raw");
 
 
@@ -129,6 +129,11 @@ public class GreenBlocks {
 
         panelItemStoneGreenDark.register();
         panelItemStoneGreenLight.register();
+
+        slabStoneGreenDarkRaw.register();
+        slabDoubleStoneGreenDarkRaw.register();
+        slabDoubleStoneGreenDarkRaw.setSlab(slabStoneGreenDarkRaw);
+        slabItemStoneGreenDarkRaw.register();
 
         slabStoneGreenLightRaw.register();
         slabDoubleStoneGreenLightRaw.register();

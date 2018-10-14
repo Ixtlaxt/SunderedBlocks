@@ -59,7 +59,7 @@ public class GoldenBlocks {
     public static BlockVertslab vertslabStoneGoldenDarkRaw = new BlockVertslab("vertslab_stone_golden_dark_raw");
     public static BlockModStairs stairsStoneGoldenDarkRaw = new BlockModStairs(blockStoneGoldenDark.getDefaultState(), "stairs_stone_golden_dark_raw");
 
-    public static BlockVertslab vertslabStoneGoldenLightRaw = new BlockVertslab("vertslab_stone_golden_dark_raw");
+    public static BlockVertslab vertslabStoneGoldenLightRaw = new BlockVertslab("vertslab_stone_golden_light_raw");
     public static BlockModStairs stairsStoneGoldenLightRaw = new BlockModStairs(blockStoneGoldenLight.getDefaultState(), "stairs_stone_golden_light_raw");
 
 
@@ -129,6 +129,11 @@ public class GoldenBlocks {
 
         panelItemStoneGoldenDark.register();
         panelItemStoneGoldenLight.register();
+
+        slabStoneGoldenDarkRaw.register();
+        slabDoubleStoneGoldenDarkRaw.register();
+        slabDoubleStoneGoldenDarkRaw.setSlab(slabStoneGoldenDarkRaw);
+        slabItemStoneGoldenDarkRaw.register();
 
         slabStoneGoldenLightRaw.register();
         slabDoubleStoneGoldenLightRaw.register();

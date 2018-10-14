@@ -59,7 +59,7 @@ public class BrownBlocks {
     public static BlockVertslab vertslabStoneBrownDarkRaw = new BlockVertslab("vertslab_stone_brown_dark_raw");
     public static BlockModStairs stairsStoneBrownDarkRaw = new BlockModStairs(blockStoneBrownDark.getDefaultState(), "stairs_stone_brown_dark_raw");
 
-    public static BlockVertslab vertslabStoneBrownLightRaw = new BlockVertslab("vertslab_stone_brown_dark_raw");
+    public static BlockVertslab vertslabStoneBrownLightRaw = new BlockVertslab("vertslab_stone_brown_light_raw");
     public static BlockModStairs stairsStoneBrownLightRaw = new BlockModStairs(blockStoneBrownLight.getDefaultState(), "stairs_stone_brown_light_raw");
 
 
@@ -130,6 +130,11 @@ public class BrownBlocks {
 
         panelItemStoneBrownDark.register();
         panelItemStoneBrownLight.register();
+
+        slabStoneBrownDarkRaw.register();
+        slabDoubleStoneBrownDarkRaw.register();
+        slabDoubleStoneBrownDarkRaw.setSlab(slabStoneBrownDarkRaw);
+        slabItemStoneBrownDarkRaw.register();
 
         slabStoneBrownLightRaw.register();
         slabDoubleStoneBrownLightRaw.register();

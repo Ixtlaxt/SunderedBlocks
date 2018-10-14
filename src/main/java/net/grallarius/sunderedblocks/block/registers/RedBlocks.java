@@ -59,7 +59,7 @@ public class RedBlocks {
     public static BlockVertslab vertslabStoneRedDarkRaw = new BlockVertslab("vertslab_stone_red_dark_raw");
     public static BlockModStairs stairsStoneRedDarkRaw = new BlockModStairs(blockStoneRedDark.getDefaultState(), "stairs_stone_red_dark_raw");
 
-    public static BlockVertslab vertslabStoneRedLightRaw = new BlockVertslab("vertslab_stone_red_dark_raw");
+    public static BlockVertslab vertslabStoneRedLightRaw = new BlockVertslab("vertslab_stone_red_light_raw");
     public static BlockModStairs stairsStoneRedLightRaw = new BlockModStairs(blockStoneRedLight.getDefaultState(), "stairs_stone_red_light_raw");
 
 
@@ -130,6 +130,11 @@ public class RedBlocks {
 
         panelItemStoneRedDark.register();
         panelItemStoneRedLight.register();
+
+        slabStoneRedDarkRaw.register();
+        slabDoubleStoneRedDarkRaw.register();
+        slabDoubleStoneRedDarkRaw.setSlab(slabStoneRedDarkRaw);
+        slabItemStoneRedDarkRaw.register();
 
         slabStoneRedLightRaw.register();
         slabDoubleStoneRedLightRaw.register();

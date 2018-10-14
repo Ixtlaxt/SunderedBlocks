@@ -53,7 +53,7 @@ public class BlueBlocks {
     public static BlockVertslab vertslabStoneBlueDarkRaw = new BlockVertslab("vertslab_stone_blue_dark_raw");
     public static BlockModStairs stairsStoneBlueDarkRaw = new BlockModStairs(blockStoneBlueDark.getDefaultState(), "stairs_stone_blue_dark_raw");
 
-    public static BlockVertslab vertslabStoneBlueLightRaw = new BlockVertslab("vertslab_stone_blue_dark_raw");
+    public static BlockVertslab vertslabStoneBlueLightRaw = new BlockVertslab("vertslab_stone_blue_light_raw");
     public static BlockModStairs stairsStoneBlueLightRaw = new BlockModStairs(blockStoneBlueLight.getDefaultState(), "stairs_stone_blue_light_raw");
 
 

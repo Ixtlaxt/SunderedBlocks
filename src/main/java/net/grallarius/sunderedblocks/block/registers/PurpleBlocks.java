@@ -59,7 +59,7 @@ public class PurpleBlocks {
     public static BlockVertslab vertslabStonePurpleDarkRaw = new BlockVertslab("vertslab_stone_purple_dark_raw");
     public static BlockModStairs stairsStonePurpleDarkRaw = new BlockModStairs(blockStonePurpleDark.getDefaultState(), "stairs_stone_purple_dark_raw");
 
-    public static BlockVertslab vertslabStonePurpleLightRaw = new BlockVertslab("vertslab_stone_purple_dark_raw");
+    public static BlockVertslab vertslabStonePurpleLightRaw = new BlockVertslab("vertslab_stone_purple_light_raw");
     public static BlockModStairs stairsStonePurpleLightRaw = new BlockModStairs(blockStonePurpleLight.getDefaultState(), "stairs_stone_purple_light_raw");
 
 
@@ -130,6 +130,11 @@ public class PurpleBlocks {
 
         panelItemStonePurpleDark.register();
         panelItemStonePurpleLight.register();
+
+        slabStonePurpleDarkRaw.register();
+        slabDoubleStonePurpleDarkRaw.register();
+        slabDoubleStonePurpleDarkRaw.setSlab(slabStonePurpleDarkRaw);
+        slabItemStonePurpleDarkRaw.register();
 
         slabStonePurpleLightRaw.register();
         slabDoubleStonePurpleLightRaw.register();
