@@ -111,7 +111,7 @@ public class BlockMoss extends BlockBase {
 
             if (world.getBlockState(blockpos1).getBlock() == this.getBlockState().getBlock()){
                 IBlockState mossState = world.getBlockState(blockpos1);
-                if(mossState.getValue(MATURITY) < 3) {
+                if(mossState.getValue(MATURITY) <= 3) {
                     //System.out.println("BlockMoss:updateTick - maturing moss at: " + blockpos1);
                     world.setBlockState(blockpos1, mossState.withProperty(MATURITY, mossState.getValue(MATURITY) + 1));
                 }
