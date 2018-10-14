@@ -89,21 +89,21 @@ public class BlockMoss extends BlockBase {
 
             for (BlockPos blockpos : BlockPos.getAllInBoxMutable(pos.add(-1, -1, -1), pos.add(1, 1, 1))){
                 if (world.getBlockState(blockpos).getBlock() == this){
-                    System.out.println("BlockMoss:updateTick - found moss at: " + blockpos);
+                    //System.out.println("BlockMoss:updateTick - found moss at: " + blockpos);
                     --i;
                     if (i <= 0){
-                        System.out.println("BlockMoss:updateTick - Too many moss.");
+                        //System.out.println("BlockMoss:updateTick - Too many moss.");
                         return;
                     }
                 }
             }
 
             BlockPos blockpos1 = pos.add(rand.nextInt(2) -1, rand.nextInt(2) -1, rand.nextInt(2) -1);
-            System.out.println("BlockMoss:updateTick - attempting to add moss from " + pos + " to: " + blockpos1);
+            //System.out.println("BlockMoss:updateTick - attempting to add moss from " + pos + " to: " + blockpos1);
 
             for (int k = 0; k < 4; ++k){
                 if (world.isAirBlock(blockpos1) && this.canPlaceBlockAt(world, blockpos1)){
-                    System.out.println("BlockMoss:updateTick - intermediate position selected: " + blockpos1);
+                    //System.out.println("BlockMoss:updateTick - intermediate position selected: " + blockpos1);
                     pos = blockpos1;
                 }
                 blockpos1 = pos.add(rand.nextInt(2) -1, rand.nextInt(2) -1, rand.nextInt(2) -1);
@@ -112,12 +112,12 @@ public class BlockMoss extends BlockBase {
             if (world.getBlockState(blockpos1).getBlock() == this.getBlockState().getBlock()){
                 IBlockState mossState = world.getBlockState(blockpos1);
                 if(mossState.getValue(MATURITY) < 3) {
-                    System.out.println("BlockMoss:updateTick - maturing moss at: " + blockpos1);
+                    //System.out.println("BlockMoss:updateTick - maturing moss at: " + blockpos1);
                     world.setBlockState(blockpos1, mossState.withProperty(MATURITY, mossState.getValue(MATURITY) + 1));
                 }
             }
             else if (world.isAirBlock(blockpos1) && this.canPlaceBlockAt(world, blockpos1)){
-                System.out.println("BlockMoss:updateTick - added moss to: " + blockpos1);
+                //System.out.println("BlockMoss:updateTick - added moss to: " + blockpos1);
                 world.setBlockState(blockpos1, this.getDefaultState());
             }
         }
