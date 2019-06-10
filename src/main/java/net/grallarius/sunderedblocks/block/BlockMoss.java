@@ -81,7 +81,7 @@ public class BlockMoss extends BlockBase {
 
     public void updateTick(World world, BlockPos pos, IBlockState state, Random rand){
 
-        System.out.println("BlockMoss:updateTick - I'm ticking! " + pos);
+        //System.out.println("BlockMoss:updateTick - I'm ticking! " + (rand.nextInt(3)-1));
 
         if (rand.nextInt(20) == 0)
         {
@@ -98,7 +98,7 @@ public class BlockMoss extends BlockBase {
                 }
             }
 
-            BlockPos blockpos1 = pos.add(rand.nextInt(2) -1, rand.nextInt(2) -1, rand.nextInt(2) -1);
+            BlockPos blockpos1 = pos.add(rand.nextInt(3) -1, rand.nextInt(3) -1, rand.nextInt(3) -1);
             //System.out.println("BlockMoss:updateTick - attempting to add moss from " + pos + " to: " + blockpos1);
 
             for (int k = 0; k < 4; ++k){
@@ -106,7 +106,7 @@ public class BlockMoss extends BlockBase {
                     //System.out.println("BlockMoss:updateTick - intermediate position selected: " + blockpos1);
                     pos = blockpos1;
                 }
-                blockpos1 = pos.add(rand.nextInt(2) -1, rand.nextInt(2) -1, rand.nextInt(2) -1);
+                blockpos1 = pos.add(rand.nextInt(3) -1, rand.nextInt(3) -1, rand.nextInt(3) -1);
             }
 
             if (world.getBlockState(blockpos1).getBlock() == this.getBlockState().getBlock()){

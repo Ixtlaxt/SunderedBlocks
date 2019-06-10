@@ -75,7 +75,8 @@ public class ModBlocks {
 
 
 
-        BlueBlocks.register();
+        StoneBlueDark.register();
+        StoneBlueLight.register();
         BrownBlocks.register();
         CyanBlocks.register();
         GoldenBlocks.register();
