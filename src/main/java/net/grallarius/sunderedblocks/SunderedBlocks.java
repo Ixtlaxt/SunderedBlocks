@@ -1,75 +1,53 @@
 package net.grallarius.sunderedblocks;
 
-import net.grallarius.sunderedblocks.block.ModBlocks;
-import net.grallarius.sunderedblocks.network.PacketRequestUpdateWorkbench;
-import net.grallarius.sunderedblocks.network.PacketUpdateWorkbench;
+import net.grallarius.sunderedblocks.proxy.ClientProxy;
+import net.grallarius.sunderedblocks.proxy.IProxy;
 import net.grallarius.sunderedblocks.proxy.ServerProxy;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@Mod(modid = SunderedBlocks.MODID, name = SunderedBlocks.NAME, version = SunderedBlocks.VERSION)
+@Mod(SunderedBlocks.MODID)
+@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 
 public class SunderedBlocks {
 
     public static final String MODID = "sunderedblocks";
-    public static final String NAME = "Sundered Blocks";
-    public static final String VERSION = "0.0.1";
 
     public static IForgeRegistry<Block> BLOCK_REGISTRY = GameRegistry.findRegistry(Block.class);
     public static IForgeRegistry<Item>  ITEM_REGISTRY  = GameRegistry.findRegistry(Item.class);
 
-    public static SimpleNetworkWrapper wrapper = NetworkRegistry.INSTANCE.newSimpleChannel(SunderedBlocks.MODID);
+    public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
 
+    public SunderedBlocks() {
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        MinecraftForge.EVENT_BUS.register(this);
+    }
 
-    public static CreativeTabs ixTab = new CreativeTabs("sundered.block") {
-        @Override
-        public ItemStack getTabIconItem() {
-            return new ItemStack(ModBlocks.blockTest);
-        }
-    };
+    private void setup(final FMLCommonSetupEvent event) {
+        //proxy.preInit(event);
 
-
-    @Mod.Instance
-    public static SunderedBlocks instance;
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-
-        proxy.preInit(event);
-
-        NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGuiHandler());
+        //NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGuiHandler());
 
         int index = 0;
 
-        wrapper.registerMessage(new PacketUpdateWorkbench.Handler(), PacketUpdateWorkbench.class, index++, Side.CLIENT);
-        wrapper.registerMessage(new PacketRequestUpdateWorkbench.Handler(), PacketRequestUpdateWorkbench.class, index++, Side.SERVER);
+        //wrapper.registerMessage(new PacketUpdateWorkbench.Handler(), PacketUpdateWorkbench.class, index++, Side.CLIENT);
+        //wrapper.registerMessage(new PacketRequestUpdateWorkbench.Handler(), PacketRequestUpdateWorkbench.class, index++, Side.SERVER);
     }
 
-    @EventHandler
-    public void init(FMLInitializationEvent event) {
-        proxy.init(event);
-    }
+    //public static SimpleNetworkWrapper wrapper = NetworkRegistry.INSTANCE.newSimpleChannel(SunderedBlocks.MODID);
 
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
-        proxy.postInit(event);
-    }
 
-    @SidedProxy(serverSide = "net.grallarius.sunderedblocks.proxy.ServerProxy",
-                clientSide = "net.grallarius.sunderedblocks.proxy.ClientProxy",
-                modId = MODID)
-    public static ServerProxy proxy;
+    //public static CreativeTabs ixTab = new CreativeTabs("sundered.block") {
+    //    @Override
+    //    public ItemStack getTabIconItem() {
+    //        return new ItemStack(ModBlocks.blockTest);
+    //    }
+    //};
 }

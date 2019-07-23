@@ -167,7 +167,7 @@ public class BlockMoss extends BlockBase {
     }
 
     /**
-     * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit.
+     * Ray traces through the block collision from start vector to end vector returning a ray trace hit.
      * Makes it so the block is only selected when the cursor is pointing at a part of the block.
      */
     @Nullable

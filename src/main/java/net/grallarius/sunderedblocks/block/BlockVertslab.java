@@ -157,7 +157,7 @@ public class BlockVertslab extends BlockBase{
     }
 
     /**
-     * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit.
+     * Ray traces through the block collision from start vector to end vector returning a ray trace hit.
      */
     @Nullable
     public RayTraceResult collisionRayTrace(IBlockState blockState, World worldIn, BlockPos pos, Vec3d start, Vec3d end)
