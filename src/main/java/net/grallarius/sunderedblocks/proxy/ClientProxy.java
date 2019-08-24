@@ -11,11 +11,4 @@ public class ClientProxy implements IProxy{
     public void setup(FMLCommonSetupEvent event) {
         OBJLoader.INSTANCE.addDomain(MODID);
     }
-
-/*    @Override
-    public void registerRenderers() {
-       *//* ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWorkbench.class, new TESRWorkbench());*//*
-    }*/
-
-
 }

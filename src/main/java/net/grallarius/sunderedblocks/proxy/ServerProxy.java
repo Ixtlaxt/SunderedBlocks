@@ -8,7 +8,4 @@ public class ServerProxy implements IProxy{
     public void setup(FMLCommonSetupEvent event) {
 
     }
-
-    public void registerRenderers() {
-    }
 }

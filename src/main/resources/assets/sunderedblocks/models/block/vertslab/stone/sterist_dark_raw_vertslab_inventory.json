@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/vertslab/vertslab_inventory",
+  "textures": {
+    "end": "sunderedblocks:block/stone/sterist_dark_raw",
+    "side": "sunderedblocks:block/stone/sterist_dark_raw"
+  }
+}

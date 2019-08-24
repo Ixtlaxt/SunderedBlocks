@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sunderedblocks:block/sand/sand_tropic"
+  }
+}

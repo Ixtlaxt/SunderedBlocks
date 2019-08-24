@@ -1,257 +1,163 @@
 package net.grallarius.sunderedblocks.block;
 
-import com.google.common.collect.Lists;
-import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockFaceShape;
-import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.block.*;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.fluid.IFluidState;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.state.IProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-import javax.annotation.Nullable;
-import java.util.List;
+public class BlockVertslab extends Block implements IBucketPickupHandler, ILiquidContainer{
 
-public class BlockVertslab extends BlockBase{
-
-    public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    public static final PropertyEnum<EnumShape> SHAPE = PropertyEnum.create("shape", EnumShape.class);
-
-    protected static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.5D);
-    protected static final AxisAlignedBB EAST_AABB =  new AxisAlignedBB(0.5D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.5D, 1.0D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB WEST_AABB =  new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.5D, 1.0D, 1.0D);
-
-
-    protected static final AxisAlignedBB NORTHWEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.5D, 1.0D, 0.5D);
-    protected static final AxisAlignedBB NORTHEAST_AABB = new AxisAlignedBB(0.5D, 0.0D, 0.0D, 1.0D, 1.0D, 0.5D);
-    protected static final AxisAlignedBB SOUTHWEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.5D, 0.5D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB SOUTHEAST_AABB = new AxisAlignedBB(0.5D, 0.0D, 0.5D, 1.0D, 1.0D, 1.0D);
+    public static final DirectionProperty FACING;
+    public static final BooleanProperty NW;
+    public static final BooleanProperty NE;
+    public static final BooleanProperty SE;
+    public static final BooleanProperty SW;
+    public static final BooleanProperty WATERLOGGED;
+    public static final VoxelShape VXNW;
+    public static final VoxelShape VXNE;
+    public static final VoxelShape VXSE;
+    public static final VoxelShape VXSW;
 
 
-    public BlockVertslab(String name) {
-        super(Material.ROCK, name);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.SOUTH));
+    public BlockVertslab(Properties properties) {
+        super(properties);
+        this.setDefaultState(this.getDefaultState().with(FACING, Direction.NORTH).with(NW, true).with(NE, true).with(WATERLOGGED, false));
     }
 
-    @Override
-    @Deprecated
-    public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
-
-        EnumShape shape = getShape(state, world, pos);
-        return state.withProperty(SHAPE, shape);
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> stateBuilder) {
+        stateBuilder.add(new IProperty[]{FACING, NW, NE, SE, SW, WATERLOGGED});
     }
 
-    public EnumShape getShape(IBlockState state, IBlockAccess world, BlockPos pos) {
+    private BlockState shapeState(IWorld world, BlockState state, BlockPos pos) {
 
-        IBlockState front = world.getBlockState(pos.offset(state.getValue(FACING).getOpposite()));
+        boolean ul = true;
+        boolean ur = true;
+        boolean ll = false;
+        boolean lr = false;
 
-        if (front.getBlock() == this.getBlockState().getBlock() && (state.getValue(FACING).getAxis() != front.getValue(FACING).getAxis())) {
-            if (state.getValue(FACING).rotateY()  == front.getValue(FACING)) {
-                return EnumShape.CORNERFLIP;
+        Direction facing = state.get(FACING);
+        BlockState front = world.getBlockState(pos.offset(facing.getOpposite()));
+        BlockState back = world.getBlockState(pos.offset(facing));
+        if (back.getBlock() instanceof BlockVertslab && facing.getAxis() != back.get(FACING).getAxis()) {
+            if (facing.rotateY() == back.get(FACING)) {
+                ul = false;
             }
-            return EnumShape.CORNER;
-        }
-
-        IBlockState back = world.getBlockState(pos.offset(state.getValue(FACING)));
-
-        if (back.getBlock() == this.getBlockState().getBlock() && (state.getValue(FACING).getAxis() != back.getValue(FACING).getAxis())) {
-            if (state.getValue(FACING).rotateY()  == back.getValue(FACING)) {
-                return EnumShape.EDGEFLIP;
-            }
-            return EnumShape.EDGE;
-        }
-        return EnumShape.SLAB;
-    }
-
-    @Deprecated
-    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-    }
-
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()), 2);
-    }
-
-    @Override
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState)
-    {
-        if (!isActualState)
-        {
-            state = this.getActualState(state, worldIn, pos);
-        }
-
-        for (AxisAlignedBB axisalignedbb : getCollisionBoxList(state))
-        {
-            addCollisionBoxToList(pos, entityBox, collidingBoxes, axisalignedbb);
-        }
-    }
-
-    private static List<AxisAlignedBB> getCollisionBoxList(IBlockState state) {
-        List<AxisAlignedBB> list = Lists.newArrayList();
-        EnumShape shape = state.getValue(SHAPE);
-
-
-        if(shape != EnumShape.EDGE && shape != EnumShape.EDGEFLIP) {
-            list.add(getSlabBB(state));
-        }
-        if(shape != EnumShape.SLAB) {
-            list.add(getCornerBB(state));
-        }
-        //System.out.println("getCollisionBoxList:- resulting list - " + list);
-        return list;
-    }
-
-    private static AxisAlignedBB getCornerBB(IBlockState state) {
-        EnumFacing facing;
-        switch(state.getValue(SHAPE)) {
-            case EDGEFLIP:
-            case CORNERFLIP:
-                facing = state.getValue(FACING).rotateY();
-                break;
-            case CORNER:
-                facing = state.getValue(FACING).rotateYCCW();
-                break;
-            case EDGE:
-            default:
-                facing = state.getValue(FACING);
-        }
-
-        switch(facing) {
-            case NORTH:
-            default:
-                return NORTHWEST_AABB;
-            case EAST:
-                return NORTHEAST_AABB;
-            case SOUTH:
-                return SOUTHEAST_AABB;
-            case WEST:
-                return SOUTHWEST_AABB;
-        }
-    }
-
-    private static AxisAlignedBB getSlabBB(IBlockState state) {
-        switch(state.getValue(FACING)){
-            case EAST:
-                return EAST_AABB;
-            case SOUTH:
-                return SOUTH_AABB;
-            case WEST:
-                return WEST_AABB;
-            case NORTH:
-            default:
-                return NORTH_AABB;
-        }
-    }
-
-    /**
-     * Ray traces through the block collision from start vector to end vector returning a ray trace hit.
-     */
-    @Nullable
-    public RayTraceResult collisionRayTrace(IBlockState blockState, World worldIn, BlockPos pos, Vec3d start, Vec3d end)
-    {
-        List<RayTraceResult> list = Lists.<RayTraceResult>newArrayList();
-
-        for (AxisAlignedBB axisalignedbb : getCollisionBoxList(this.getActualState(blockState, worldIn, pos)))
-        {
-            list.add(this.rayTrace(pos, start, end, axisalignedbb));
-        }
-
-        RayTraceResult raytraceresult1 = null;
-        double d1 = 0.0D;
-
-        for (RayTraceResult raytraceresult : list)
-        {
-            if (raytraceresult != null)
-            {
-                double d0 = raytraceresult.hitVec.squareDistanceTo(end);
-
-                if (d0 > d1)
-                {
-                    raytraceresult1 = raytraceresult;
-                    d1 = d0;
-                }
+            else {
+                ur = false;
             }
         }
-
-        return raytraceresult1;
-    }
-
-
-    @Override
-    @Deprecated
-    public boolean isOpaqueCube(IBlockState state) {
-        return false;
-    }
-
-    @Override
-    @Deprecated
-    public boolean isFullCube(IBlockState state) {
-        return false;
-    }
-
-    @Override
-    @Deprecated
-    public boolean isFullBlock(IBlockState state) {
-        return false;
-    }
-
-    @Override
-    protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[] {FACING, SHAPE});
-    }
-
-    @Override
-    @Deprecated
-    public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.getFront(meta));
-    }
-
-    public int getMetaFromState(IBlockState state) {
-        return state.getValue(FACING).getIndex();
-    }
-
-    @Deprecated
-    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
-    {
-        if(face == state.getValue(FACING)) return BlockFaceShape.SOLID;
-        return BlockFaceShape.UNDEFINED;
-    }
-
-    public enum EnumShape implements IStringSerializable {
-
-        SLAB("slab"),
-        CORNER("corner"),
-        CORNERFLIP("cornerflip"),
-        EDGE("edge"),
-        EDGEFLIP("edgeflip");
-
-        private final String name;
-
-        EnumShape(String name) {
-            this.name = name;
+        else if (front.getBlock() instanceof BlockVertslab && facing.getAxis() != front.get(FACING).getAxis()) {
+            if (facing.rotateY() == front.get(FACING)) {
+                lr = true;
+            }
+            else {
+                ll = true;
+            }
         }
-
-        public String toString() {
-            return this.name;
+        switch (facing) {
+            case EAST:  return state.with(NW, ll).with(NE, ul).with(SE, ur).with(SW, lr);
+            case SOUTH: return state.with(NW, lr).with(NE, ll).with(SE, ul).with(SW, ur);
+            case WEST:  return state.with(NW, ur).with(NE, lr).with(SE, ll).with(SW, ul);
         }
+        return state.with(NW, ul).with(NE, ur).with(SE, lr).with(SW, ll);
+    }
 
-        @Override
-        public String getName() {
-            return this.name;
+    @Override
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
+        IFluidState fluidState = context.getWorld().getFluidState(context.getPos());
+        BlockState state = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+        return shapeState(context.getWorld(), state, context.getPos());
+}
+
+    @Override
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos, BlockPos facingPos) {
+        if (stateIn.get(WATERLOGGED)) {
+            world.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+        BlockState state = this.shapeState(world, stateIn, currentPos);
+        return state;
+    }
+
+    public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext context) {
+        VoxelShape shape = Block.makeCuboidShape(0,0,0,0,0,0);
+        if (state.get(NW)) {
+            shape = VoxelShapes.or(shape, VXNW);}
+        if (state.get(NE)) {
+            shape = VoxelShapes.or(shape, VXNE);}
+        if (state.get(SE)) {
+            shape = VoxelShapes.or(shape, VXSE);}
+        if (state.get(SW)) {
+            shape = VoxelShapes.or(shape, VXSW);}
+        return shape;
+    }
+
+//    @Override
+//    public boolean isFullCube(IBlockState state) {
+//        return false;
+//    }
+
+    public Fluid pickupFluid(IWorld world, BlockPos pos, BlockState state) {
+        if (state.get(WATERLOGGED)) {
+            world.setBlockState(pos, state.with(WATERLOGGED, false), 3);
+            return Fluids.WATER;
+        } else {
+            return Fluids.EMPTY;
         }
     }
 
+    public IFluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+    }
+
+    public boolean canContainFluid(IBlockReader reader, BlockPos pos, BlockState state, Fluid fluid) {
+        return !state.get(WATERLOGGED) && fluid == Fluids.WATER;
+    }
+
+    public boolean receiveFluid(IWorld world, BlockPos pos, BlockState blockState, IFluidState fluidState) {
+        if (!blockState.get(WATERLOGGED) && fluidState.getFluid() == Fluids.WATER) {
+            if (!world.isRemote()) {
+                world.setBlockState(pos, blockState.with(WATERLOGGED, true), 3);
+                world.getPendingFluidTicks().scheduleTick(pos, fluidState.getFluid(), fluidState.getFluid().getTickRate(world));
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public BlockRenderLayer getRenderLayer(){
+        return BlockRenderLayer.CUTOUT_MIPPED;
+    }
+
+    static {
+        FACING = HorizontalBlock.HORIZONTAL_FACING;
+        NW = BooleanProperty.create("northwest");
+        NE = BooleanProperty.create("northeast");
+        SE = BooleanProperty.create("southeast");
+        SW = BooleanProperty.create("southwest");
+        WATERLOGGED = BlockStateProperties.WATERLOGGED;
+        VXNW = Block.makeCuboidShape(0,0,0,8,16,8);
+        VXNE = Block.makeCuboidShape(8,0,0,16,16,8);
+        VXSE = Block.makeCuboidShape(8,0,8,16,16,16);
+        VXSW = Block.makeCuboidShape(0,0,8,8,16,16);
+
+    }
 }

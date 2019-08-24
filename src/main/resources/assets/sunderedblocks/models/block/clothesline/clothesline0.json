@@ -1,6 +1,0 @@
-{
-  "parent": "sunderedblocks:clothesline/clothesline",
-  "textures": {
-    "all": "sunderedblocks:blocks/clothesline/line0"
-  }
-}

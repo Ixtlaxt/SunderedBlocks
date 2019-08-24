@@ -1,16 +1,7 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "top":    "sunderedblocks:blocks/test_panel",
-      "bottom": "sunderedblocks:blocks/test_panel",
-      "side":   "sunderedblocks:blocks/test_slab"
-    }
-  },
   "variants": {
-    "normal": {
-      "model": "cube_bottom_top"},
-    "inventory": {
-      "model": "cube_bottom_top"}
+    "": [
+      {"model": "sunderedblocks:block/test_block"}
+    ]
   }
 }
