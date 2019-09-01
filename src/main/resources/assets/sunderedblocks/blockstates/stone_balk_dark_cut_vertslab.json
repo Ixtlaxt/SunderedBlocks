@@ -1,0 +1,43 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "northwest": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/vertslab/stone/balk_dark_cut_vertslab_chunk",
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "northeast": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/vertslab/stone/balk_dark_cut_vertslab_chunk",
+                "y": 90,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "southeast": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/vertslab/stone/balk_dark_cut_vertslab_chunk",
+                "y": 180,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "southwest": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/vertslab/stone/balk_dark_cut_vertslab_chunk",
+                "y": 270,
+                "uvlock": true
+            }
+        }
+    ]
+}

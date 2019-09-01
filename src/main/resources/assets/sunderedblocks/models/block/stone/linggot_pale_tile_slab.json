@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/linggot_pale_tile",
+        "top": "sunderedblocks:block/stone/linggot_pale_tile",
+        "side": "sunderedblocks:block/stone/linggot_pale_tile"
+    }
+}

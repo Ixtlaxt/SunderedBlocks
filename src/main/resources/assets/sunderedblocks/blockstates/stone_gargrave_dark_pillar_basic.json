@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "axis=y": {
+            "model": "sunderedblocks:block/stone/gargrave_dark_pillar_basic"
+        },
+        "axis=z": {
+            "model": "sunderedblocks:block/stone/gargrave_dark_pillar_basic",
+            "x": 90
+        },
+        "axis=x": {
+            "model": "sunderedblocks:block/stone/gargrave_dark_pillar_basic",
+            "x": 90,
+            "y": 90
+        }
+    }
+}

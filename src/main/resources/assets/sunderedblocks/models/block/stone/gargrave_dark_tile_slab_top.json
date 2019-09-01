@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/gargrave_dark_tile",
+        "top": "sunderedblocks:block/stone/gargrave_dark_tile",
+        "side": "sunderedblocks:block/stone/gargrave_dark_tile"
+    }
+}

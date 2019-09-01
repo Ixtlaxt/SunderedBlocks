@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/rhodian_dark_tile",
+        "top": "sunderedblocks:block/stone/rhodian_dark_tile",
+        "side": "sunderedblocks:block/stone/rhodian_dark_tile"
+    }
+}

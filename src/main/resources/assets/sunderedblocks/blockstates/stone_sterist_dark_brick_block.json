@@ -1,7 +1,21 @@
 {
-  "variants": {
-    "": [
-      {"model": "sunderedblocks:block/stone/sterist_dark_brick_block"}
-    ]
-  }
+    "variants": {
+        "": [
+            {
+                "model": "sunderedblocks:block/stone/sterist_dark_brick_block"
+            },
+            {
+                "model": "sunderedblocks:block/stone/sterist_dark_brick_block",
+                "y": 90
+            },
+            {
+                "model": "sunderedblocks:block/stone/sterist_dark_brick_block",
+                "y": 180
+            },
+            {
+                "model": "sunderedblocks:block/stone/sterist_dark_brick_block",
+                "y": 270
+            }
+        ]
+    }
 }

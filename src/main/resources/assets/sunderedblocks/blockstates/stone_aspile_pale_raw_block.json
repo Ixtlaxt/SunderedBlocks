@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "sunderedblocks:block/stone/aspile_pale_raw_block"
+            },
+            {
+                "model": "sunderedblocks:block/stone/aspile_pale_raw_block",
+                "y": 90
+            },
+            {
+                "model": "sunderedblocks:block/stone/aspile_pale_raw_block",
+                "y": 180
+            },
+            {
+                "model": "sunderedblocks:block/stone/aspile_pale_raw_block",
+                "y": 270
+            }
+        ]
+    }
+}

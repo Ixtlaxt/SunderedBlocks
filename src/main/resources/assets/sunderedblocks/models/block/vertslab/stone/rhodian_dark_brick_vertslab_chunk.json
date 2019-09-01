@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/vertslab/vertslab_chunk",
+    "textures": {
+        "end": "sunderedblocks:block/stone/rhodian_dark_brick",
+        "side": "sunderedblocks:block/stone/rhodian_dark_brick"
+    }
+}

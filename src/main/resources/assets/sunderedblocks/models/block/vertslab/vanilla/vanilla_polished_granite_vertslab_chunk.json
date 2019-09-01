@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/vertslab/vertslab_chunk",
+  "textures": {
+    "end": "block/polished_granite",
+    "side": "block/polished_granite"
+  }
+}

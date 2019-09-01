@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/vertslab/vertslab_chunk",
+    "textures": {
+        "end": "sunderedblocks:block/stone/umberlite_dark_tile",
+        "side": "sunderedblocks:block/stone/umberlite_dark_tile"
+    }
+}

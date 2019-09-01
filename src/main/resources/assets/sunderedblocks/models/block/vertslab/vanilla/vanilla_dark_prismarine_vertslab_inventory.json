@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/vertslab/vertslab_inventory",
+  "textures": {
+    "end": "block/dark_prismarine",
+    "side": "block/dark_prismarine"
+  }
+}

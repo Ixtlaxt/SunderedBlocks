@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "sunderedblocks:block/stone/gargrave_pale_cut"
+    }
+}

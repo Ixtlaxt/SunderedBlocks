@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/balk_dark_brick",
+        "top": "sunderedblocks:block/stone/balk_dark_brick",
+        "side": "sunderedblocks:block/stone/balk_dark_brick"
+    }
+}

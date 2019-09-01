@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "sunderedblocks:block/stone/sterist_pale_brick"
+    }
+}

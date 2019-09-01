@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "#  ",
+        "#  "
+    ],
+    "key": {
+        "#": {
+            "item": "sunderedblocks:stone_linggot_dark_trapdoor"
+        }
+    },
+    "result": {
+        "item": "sunderedblocks:stone_linggot_dark_trapdoor",
+        "count": 3
+    }
+}

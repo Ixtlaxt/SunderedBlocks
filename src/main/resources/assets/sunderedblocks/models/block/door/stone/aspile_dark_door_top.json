@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/aspile_dark_door_bottom",
+        "top": "sunderedblocks:block/stone/aspile_dark_door_top"
+    }
+}

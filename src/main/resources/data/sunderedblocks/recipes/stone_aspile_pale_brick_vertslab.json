@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "#  ",
+        "#  "
+    ],
+    "key": {
+        "#": {
+            "item": "sunderedblocks:stone_aspile_pale_brick_vertslab"
+        }
+    },
+    "result": {
+        "item": "sunderedblocks:stone_aspile_pale_brick_vertslab",
+        "count": 3
+    }
+}

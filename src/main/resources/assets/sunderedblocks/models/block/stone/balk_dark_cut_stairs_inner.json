@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/balk_dark_cut",
+        "top": "sunderedblocks:block/stone/balk_dark_cut",
+        "side": "sunderedblocks:block/stone/balk_dark_slab"
+    }
+}

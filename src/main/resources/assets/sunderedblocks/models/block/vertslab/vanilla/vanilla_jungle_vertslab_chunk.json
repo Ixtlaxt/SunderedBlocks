@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/vertslab/vertslab_chunk",
+  "textures": {
+    "end": "block/jungle_planks",
+    "side": "block/jungle_planks"
+  }
+}

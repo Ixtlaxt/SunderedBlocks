@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "#  ",
+        "#  "
+    ],
+    "key": {
+        "#": {
+            "item": "sunderedblocks:stone_balk_pale_brick_block"
+        }
+    },
+    "result": {
+        "item": "sunderedblocks:stone_balk_pale_brick_block",
+        "count": 3
+    }
+}

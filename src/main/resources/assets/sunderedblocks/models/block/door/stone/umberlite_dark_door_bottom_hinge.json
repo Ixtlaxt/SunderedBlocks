@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/umberlite_dark_door_bottom",
+        "top": "sunderedblocks:block/stone/umberlite_dark_door_top"
+    }
+}

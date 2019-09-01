@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "sunderedblocks:block/stone/aspile_pale_cut",
+        "side": "sunderedblocks:block/stone/aspile_pale_pillar_basic"
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/base/panel",
+  "textures": {
+    "face": "sunderedblocks:block/stone/sterist_dark_brick",
+    "edge": "sunderedblocks:block/stone/sterist_dark_brick"
+  }
+}

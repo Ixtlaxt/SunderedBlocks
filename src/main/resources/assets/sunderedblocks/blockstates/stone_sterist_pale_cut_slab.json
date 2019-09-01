@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "sunderedblocks:block/stone/sterist_pale_cut_slab"
+        },
+        "type=top": {
+            "model": "sunderedblocks:block/stone/sterist_pale_cut_slab_top"
+        },
+        "type=double": {
+            "model": "sunderedblocks:block/stone/sterist_pale_cut_slab_double"
+        }
+    }
+}

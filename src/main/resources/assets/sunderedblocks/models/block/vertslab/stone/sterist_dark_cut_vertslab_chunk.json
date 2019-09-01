@@ -1,7 +1,7 @@
 {
-  "parent": "sunderedblocks:block/vertslab/vertslab_chunk",
-  "textures": {
-    "end": "sunderedblocks:block/stone/sterist_dark_cut",
-    "side": "sunderedblocks:block/stone/sterist_dark_slab"
-  }
+    "parent": "sunderedblocks:block/vertslab/vertslab_chunk",
+    "textures": {
+        "end": "sunderedblocks:block/stone/sterist_dark_cut",
+        "side": "sunderedblocks:block/stone/sterist_dark_slab"
+    }
 }

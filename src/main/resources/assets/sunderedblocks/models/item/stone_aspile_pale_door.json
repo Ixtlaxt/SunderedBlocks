@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "sunderedblocks:item/aspile_pale_door_item"
+    }
+}

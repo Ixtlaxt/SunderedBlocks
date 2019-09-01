@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/vertslab/vertslab_inventory",
+  "textures": {
+    "end": "block/birch_planks",
+    "side": "block/birch_planks"
+  }
+}

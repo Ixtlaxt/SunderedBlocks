@@ -1,7 +1,7 @@
 {
-  "parent": "block/door_bottom",
-  "textures": {
-    "bottom": "sunderedblocks:block/stone/sterist_dark_door_bottom",
-    "top": "sunderedblocks:block/stone/sterist_dark_door_top"
-  }
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/sterist_dark_door_bottom",
+        "top": "sunderedblocks:block/stone/sterist_dark_door_top"
+    }
 }

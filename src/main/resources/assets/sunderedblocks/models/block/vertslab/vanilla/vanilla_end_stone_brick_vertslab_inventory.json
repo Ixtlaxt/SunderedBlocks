@@ -1,0 +1,7 @@
+{
+  "parent": "sunderedblocks:block/vertslab/vertslab_inventory",
+  "textures": {
+    "end": "block/end_stone_bricks",
+    "side": "block/end_stone_bricks"
+  }
+}

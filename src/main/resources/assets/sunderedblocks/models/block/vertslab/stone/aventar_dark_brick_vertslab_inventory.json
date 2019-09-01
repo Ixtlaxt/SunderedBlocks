@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/vertslab/vertslab_inventory",
+    "textures": {
+        "end": "sunderedblocks:block/stone/aventar_dark_brick",
+        "side": "sunderedblocks:block/stone/aventar_dark_brick"
+    }
+}

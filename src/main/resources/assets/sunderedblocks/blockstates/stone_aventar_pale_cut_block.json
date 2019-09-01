@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "sunderedblocks:block/stone/aventar_pale_cut_block"
+            },
+            {
+                "model": "sunderedblocks:block/stone/aventar_pale_cut_block",
+                "y": 90
+            },
+            {
+                "model": "sunderedblocks:block/stone/aventar_pale_cut_block",
+                "y": 180
+            },
+            {
+                "model": "sunderedblocks:block/stone/aventar_pale_cut_block",
+                "y": 270
+            }
+        ]
+    }
+}

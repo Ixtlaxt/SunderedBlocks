@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "sunderedblocks:block/stone/rhodian_pale_tile_slab"
+        },
+        "type=top": {
+            "model": "sunderedblocks:block/stone/rhodian_pale_tile_slab_top"
+        },
+        "type=double": {
+            "model": "sunderedblocks:block/stone/rhodian_pale_tile_slab_double"
+        }
+    }
+}

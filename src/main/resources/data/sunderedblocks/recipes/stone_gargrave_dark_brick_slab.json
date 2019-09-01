@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "#  ",
+        "#  "
+    ],
+    "key": {
+        "#": {
+            "item": "sunderedblocks:stone_gargrave_dark_brick_slab"
+        }
+    },
+    "result": {
+        "item": "sunderedblocks:stone_gargrave_dark_brick_slab",
+        "count": 3
+    }
+}

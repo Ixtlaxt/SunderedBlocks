@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "sunderedblocks:block/stone/aventar_dark_brick"
+    }
+}

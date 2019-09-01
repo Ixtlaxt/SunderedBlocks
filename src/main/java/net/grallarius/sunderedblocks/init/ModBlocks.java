@@ -60,8 +60,14 @@ public class ModBlocks {
     public static final BlockModTrapDoor stone_red_dark_trapdoor = null;
 
     public static Block register(String name, Block block) {
+        return register(name, block, new Item.Properties().group(creativeTab));
+    }
 
-        BlockItem item = new BlockItem(block, new Item.Properties().group(creativeTab));
+    public static Block register(String name, Block block, Item.Properties properties){
+        return register(name, block, new BlockItem(block, properties));
+    }
+
+    public static Block register(String name, Block block, Item item) {
         block.setRegistryName(SunderedBlocks.MODID, name);
         BLOCKS.add(block);
         if(block.getRegistryName() != null) {
@@ -73,7 +79,20 @@ public class ModBlocks {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
+
+        InitAspile.init();
+        InitAventar.init();
+        InitBalk.init();
+        InitClarate.init();
+        InitGargrave.init();
+        InitLinggot.init();
+        InitRhodian.init();
+        InitSpartine.init();
         InitSterist.init();
+        InitUmberlite.init();
+
+        InitVertslab.init();
+
         BLOCKS.forEach(block -> event.getRegistry().register(block));
         BLOCKS.clear();
 
@@ -101,7 +120,6 @@ public class ModBlocks {
                 new SandBlock(14406560, Block.Properties.create(Material.SAND).hardnessAndResistance(0.5f, 0.5f).sound(SoundType.SAND)).setRegistryName(SunderedBlocks.MODID, "sand_tropic_block"),
                 new SandBlock(14406560, Block.Properties.create(Material.SAND).hardnessAndResistance(0.5f, 0.5f).sound(SoundType.SAND)).setRegistryName(SunderedBlocks.MODID, "sand_white_block")
         );
-        //InitSterist.registerBlocks(event);
     }
 
     @SubscribeEvent

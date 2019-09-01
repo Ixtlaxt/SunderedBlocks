@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "sunderedblocks:block/stone/umberlite_dark_tile_block"
+            },
+            {
+                "model": "sunderedblocks:block/stone/umberlite_dark_tile_block",
+                "y": 90
+            },
+            {
+                "model": "sunderedblocks:block/stone/umberlite_dark_tile_block",
+                "y": 180
+            },
+            {
+                "model": "sunderedblocks:block/stone/umberlite_dark_tile_block",
+                "y": 270
+            }
+        ]
+    }
+}

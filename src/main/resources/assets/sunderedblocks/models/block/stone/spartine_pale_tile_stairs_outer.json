@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "sunderedblocks:block/stone/spartine_pale_tile",
+        "top": "sunderedblocks:block/stone/spartine_pale_tile",
+        "side": "sunderedblocks:block/stone/spartine_pale_tile"
+    }
+}

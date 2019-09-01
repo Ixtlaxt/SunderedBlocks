@@ -1,0 +1,45 @@
+{
+  "variants": {
+    "facing=up,double=false": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    },
+    "facing=down,double=false": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel",
+      "x": 180
+    },
+    "facing=north,double=false": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel",
+      "y": 0, "x": 90
+    },
+    "facing=east,double=false": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel",
+      "y": 90, "x": 90
+    },
+    "facing=south,double=false": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel",
+      "y": 180, "x": 90
+    },
+    "facing=west,double=false": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel",
+      "y": 270, "x": 90
+    },
+    "facing=up,double=true": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    },
+    "facing=down,double=true": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    },
+    "facing=north,double=true": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    },
+    "facing=east,double=true": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    },
+    "facing=south,double=true": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    },
+    "facing=west,double=true": {
+      "model": "sunderedblocks:block/stone/sterist_dark_panel"
+    }
+  }
+}
