@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_chunk",
+    "textures": {
+        "end": "block/mossy_cobblestone",
+        "side": "block/mossy_cobblestone"
+    }
+}

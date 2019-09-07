@@ -1,17 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "#",
+        "#"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_linggot_pale_pillar_basic"
+            "item": "sunderedblocks:stone_linggot_pale_cut_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_linggot_pale_pillar_basic",
-        "count": 3
+        "count": 2
     }
 }

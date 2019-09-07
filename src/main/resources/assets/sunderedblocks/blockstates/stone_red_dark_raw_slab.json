@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "type=bottom": { "model": "sunderedblocks:block/stone/red_dark_raw_slab" },
-    "type=top": { "model": "sunderedblocks:block/stone/red_dark_raw_slab_top" },
-    "type=double": { "model": "sunderedblocks:block/stone/red_dark_worn_block" }
-  }
-}

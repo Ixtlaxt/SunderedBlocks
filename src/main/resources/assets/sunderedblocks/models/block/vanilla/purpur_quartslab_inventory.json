@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_inventory",
+    "textures": {
+        "end": "block/purpur_block",
+        "side": "block/purpur_block"
+    }
+}

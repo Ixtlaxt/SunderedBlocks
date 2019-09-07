@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_umberlite_dark_brick_vertslab"
+                    "name": "sunderedblocks:stone_umberlite_dark_brick_stairs"
                 }
             ],
             "conditions": [

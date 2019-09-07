@@ -2,10 +2,10 @@ package net.grallarius.sunderedblocks.init;
 
 
 import net.grallarius.sunderedblocks.block.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.Item;
 
 
 public class InitSterist {
@@ -60,6 +60,12 @@ public class InitSterist {
     public static final Block stone_sterist_pale_door = ModBlocks.register("stone_sterist_pale_door", new BlockModDoor(Block.Properties.from(stone_sterist_pale_cut_block)));
     public static final Block stone_sterist_pale_trapdoor = ModBlocks.register("stone_sterist_pale_trapdoor", new BlockModTrapDoor(Block.Properties.from(stone_sterist_pale_cut_block)));
 
+    public static final Block stone_sterist_dark_quartslab = ModBlocks.register("stone_sterist_dark_quartslab", new BlockQuartslab(Block.Properties.from(stone_sterist_dark_cut_block)));
+    public static final Block stone_sterist_pale_quartslab = ModBlocks.register("stone_sterist_pale_quartslab", new BlockQuartslab(Block.Properties.from(stone_sterist_pale_cut_block)));
+    
+    public static final Block stone_sterist_gravel = ModBlocks.register("stone_sterist_gravel", new GravelBlock(Block.Properties.create(Material.SAND, MaterialColor.STONE).hardnessAndResistance(0.6F).sound(SoundType.GROUND)));
+
+    public static final Item stone_sterist_rubble = ModItems.register("stone_sterist_rubble");
     //public static final Block stone_sterist_dark_panel = ModBlocks.register("stone_sterist_dark_panel", new BlockPanel(Block.Properties.from(stone_sterist_pale_cut_block)));
 
     public static void init() {

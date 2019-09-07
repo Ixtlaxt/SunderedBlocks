@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "sunderedblocks:stone_aspile_rubble"
+        }
+    },
+    "result": {
+        "item": "sunderedblocks:stone_aspile_gravel",
+        "count": 1
+    }
+}

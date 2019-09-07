@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_aspile_dark_raw_vertslab"
+                    "name": "sunderedblocks:stone_aspile_dark_raw_block"
                 }
             ],
             "conditions": [

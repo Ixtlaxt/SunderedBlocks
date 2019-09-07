@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_balk_pale_brick_vertslab"
+                    "name": "sunderedblocks:stone_balk_pale_brick_block"
                 }
             ],
             "conditions": [

@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_inventory",
+    "textures": {
+        "end": "sunderedblocks:block/stone/aspile_pale_brick",
+        "side": "sunderedblocks:block/stone/aspile_pale_brick"
+    }
+}

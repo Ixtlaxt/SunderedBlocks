@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_linggot_dark_cut_slab"
+    },
+    "result": "sunderedblocks:stone_linggot_dark_quartslab",
+    "count": 2
+}

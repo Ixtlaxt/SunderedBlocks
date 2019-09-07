@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_clarate_pale_cut_vertslab"
+    },
+    "result": "sunderedblocks:stone_clarate_rubble",
+    "count": 2
+}

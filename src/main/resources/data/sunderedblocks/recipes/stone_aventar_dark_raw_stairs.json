@@ -2,16 +2,16 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "#  ",
-        "#  ",
-        "#  "
+        "## ",
+        "###"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_aventar_dark_raw_stairs"
+            "item": "sunderedblocks:stone_aventar_dark_raw_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_aventar_dark_raw_stairs",
-        "count": 3
+        "count": 4
     }
 }

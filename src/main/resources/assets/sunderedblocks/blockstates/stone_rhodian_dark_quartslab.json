@@ -1,0 +1,90 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "northwest": true,
+                "top": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk_top",
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "northeast": true,
+                "top": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk_top",
+                "y": 90,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "southeast": true,
+                "top": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk_top",
+                "y": 180,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "southwest": true,
+                "top": true
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk_top",
+                "y": 270,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "northwest": true,
+                "top": false
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk",
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "northeast": true,
+                "top": false
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk",
+                "y": 90,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "southeast": true,
+                "top": false
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk",
+                "y": 180,
+                "uvlock": true
+            }
+        },
+        {
+            "when": {
+                "southwest": true,
+                "top": false
+            },
+            "apply": {
+                "model": "sunderedblocks:block/stone/rhodian_dark_quartslab_chunk",
+                "y": 270,
+                "uvlock": true
+            }
+        }
+    ]
+}

@@ -1,17 +1,17 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "##",
+        "##",
+        "##"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_aspile_pale_door"
+            "item": "sunderedblocks:stone_aspile_pale_cut_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_aspile_pale_door",
-        "count": 3
+        "count": 2
     }
 }

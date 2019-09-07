@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_chunk",
+    "textures": {
+        "end": "block/sandstone_top",
+        "side": "block/sandstone_top"
+    }
+}

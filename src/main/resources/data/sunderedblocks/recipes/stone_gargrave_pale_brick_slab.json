@@ -1,17 +1,15 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "###"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_gargrave_pale_brick_slab"
+            "item": "sunderedblocks:stone_gargrave_pale_brick_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_gargrave_pale_brick_slab",
-        "count": 3
+        "count": 6
     }
 }

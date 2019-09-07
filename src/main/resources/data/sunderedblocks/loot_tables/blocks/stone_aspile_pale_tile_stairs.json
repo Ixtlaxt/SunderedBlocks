@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_aspile_pale_tile_vertslab"
+                    "name": "sunderedblocks:stone_aspile_pale_tile_stairs"
                 }
             ],
             "conditions": [

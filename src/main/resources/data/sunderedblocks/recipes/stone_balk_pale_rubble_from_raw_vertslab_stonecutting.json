@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_balk_pale_raw_vertslab"
+    },
+    "result": "sunderedblocks:stone_balk_rubble",
+    "count": 2
+}

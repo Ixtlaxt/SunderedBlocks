@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_clarate_dark_cut_block"
+    },
+    "result": "sunderedblocks:stone_clarate_dark_cut_vertslab",
+    "count": 2
+}

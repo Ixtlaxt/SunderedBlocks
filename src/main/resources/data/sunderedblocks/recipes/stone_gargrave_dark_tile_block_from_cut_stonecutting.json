@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_gargrave_dark_cut_block"
+    },
+    "result": "sunderedblocks:stone_gargrave_dark_tile_block",
+    "count": 1
+}

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_aventar_dark_brick_block"
+    },
+    "result": "sunderedblocks:stone_aventar_dark_brick_vertslab",
+    "count": 2
+}

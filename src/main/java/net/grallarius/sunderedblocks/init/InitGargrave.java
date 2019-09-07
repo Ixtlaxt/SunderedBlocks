@@ -1,10 +1,10 @@
 package net.grallarius.sunderedblocks.init;
 
 import net.grallarius.sunderedblocks.block.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.Item;
 
 public class InitGargrave {
 
@@ -58,6 +58,12 @@ public class InitGargrave {
     public static final Block stone_gargrave_pale_door = ModBlocks.register("stone_gargrave_pale_door", new BlockModDoor(Block.Properties.from(stone_gargrave_pale_cut_block)));
     public static final Block stone_gargrave_pale_trapdoor = ModBlocks.register("stone_gargrave_pale_trapdoor", new BlockModTrapDoor(Block.Properties.from(stone_gargrave_pale_cut_block)));
 
+    public static final Block stone_gargrave_dark_quartslab = ModBlocks.register("stone_gargrave_dark_quartslab", new BlockQuartslab(Block.Properties.from(stone_gargrave_dark_cut_block)));
+    public static final Block stone_gargrave_pale_quartslab = ModBlocks.register("stone_gargrave_pale_quartslab", new BlockQuartslab(Block.Properties.from(stone_gargrave_pale_cut_block)));
+    
+    public static final Block stone_gargrave_gravel = ModBlocks.register("stone_gargrave_gravel", new GravelBlock(Block.Properties.create(Material.SAND, MaterialColor.STONE).hardnessAndResistance(0.6F).sound(SoundType.GROUND)));
+
+    public static final Item stone_gargrave_rubble = ModItems.register("stone_gargrave_rubble");
     //public static final Block stone_gargrave_dark_panel = ModBlocks.register("stone_gargrave_dark_panel", new BlockPanel(Block.Properties.from(stone_gargrave_pale_cut_block)));
 
     public static void init() {

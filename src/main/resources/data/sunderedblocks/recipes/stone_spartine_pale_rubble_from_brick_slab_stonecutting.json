@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_spartine_pale_brick_slab"
+    },
+    "result": "sunderedblocks:stone_spartine_rubble",
+    "count": 2
+}

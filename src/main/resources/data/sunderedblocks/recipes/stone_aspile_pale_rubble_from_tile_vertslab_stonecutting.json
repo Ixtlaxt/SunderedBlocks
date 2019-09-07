@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_aspile_pale_tile_vertslab"
+    },
+    "result": "sunderedblocks:stone_aspile_rubble",
+    "count": 2
+}

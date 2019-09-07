@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "sunderedblocks:item/red_dark_door_item"
-  }
-}

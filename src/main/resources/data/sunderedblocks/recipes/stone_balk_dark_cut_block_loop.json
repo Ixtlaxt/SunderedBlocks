@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "sunderedblocks:stone_balk_dark_tile_block"
+        }
+    },
+    "result": {
+        "item": "sunderedblocks:stone_balk_dark_cut_block",
+        "count": 4
+    }
+}

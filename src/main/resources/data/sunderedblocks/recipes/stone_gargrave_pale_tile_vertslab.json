@@ -1,13 +1,13 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "#",
+        "#",
+        "#"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_gargrave_pale_tile_vertslab"
+            "item": "sunderedblocks:stone_gargrave_pale_tile_slab"
         }
     },
     "result": {

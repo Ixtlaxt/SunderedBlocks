@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "sunderedblocks:block/stone/red_dark_tile",
-    "top": "sunderedblocks:block/stone/red_dark_tile",
-    "side": "sunderedblocks:block/stone/red_dark_tile"
-  }
-}

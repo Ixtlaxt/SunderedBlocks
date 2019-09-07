@@ -44,7 +44,6 @@ public class BlockPanel extends Block implements IBucketPickupHandler, ILiquidCo
         stateBuilder.add(new IProperty[]{FACING, DOUBLE, WATERLOGGED});
     }
 
-
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();

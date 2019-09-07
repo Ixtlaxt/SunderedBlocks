@@ -1,17 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "##",
+        "##"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_aventar_dark_tile_block"
+            "item": "sunderedblocks:stone_aventar_dark_brick_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_aventar_dark_tile_block",
-        "count": 3
+        "count": 4
     }
 }

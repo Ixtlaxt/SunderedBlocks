@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_umberlite_pale_cut_stairs"
+    },
+    "result": "sunderedblocks:stone_umberlite_rubble",
+    "count": 4
+}

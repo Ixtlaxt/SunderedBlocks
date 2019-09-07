@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_balk_dark_tile_block"
+    },
+    "result": "sunderedblocks:stone_balk_dark_tile_slab",
+    "count": 2
+}

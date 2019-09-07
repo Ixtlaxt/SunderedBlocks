@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_rhodian_dark_brick_stairs"
+    },
+    "result": "sunderedblocks:stone_rhodian_rubble",
+    "count": 4
+}

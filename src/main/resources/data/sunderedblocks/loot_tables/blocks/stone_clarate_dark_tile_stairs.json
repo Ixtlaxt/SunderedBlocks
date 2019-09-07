@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_clarate_dark_tile_vertslab"
+                    "name": "sunderedblocks:stone_clarate_dark_tile_stairs"
                 }
             ],
             "conditions": [

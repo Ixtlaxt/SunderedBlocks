@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_chunk_top",
+    "textures": {
+        "end": "block/jungle_planks",
+        "side": "block/jungle_planks"
+    }
+}

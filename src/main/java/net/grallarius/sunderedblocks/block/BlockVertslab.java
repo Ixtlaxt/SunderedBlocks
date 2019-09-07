@@ -54,15 +54,7 @@ public class BlockVertslab extends Block implements IBucketPickupHandler, ILiqui
         Direction facing = state.get(FACING);
         BlockState front = world.getBlockState(pos.offset(facing.getOpposite()));
         BlockState back = world.getBlockState(pos.offset(facing));
-        if (back.getBlock() instanceof BlockVertslab && facing.getAxis() != back.get(FACING).getAxis()) {
-            if (facing.rotateY() == back.get(FACING)) {
-                ul = false;
-            }
-            else {
-                ur = false;
-            }
-        }
-        else if (front.getBlock() instanceof BlockVertslab && facing.getAxis() != front.get(FACING).getAxis()) {
+        if (front.getBlock() instanceof BlockVertslab && facing.getAxis() != front.get(FACING).getAxis()) {
             if (facing.rotateY() == front.get(FACING)) {
                 lr = true;
             }
@@ -70,6 +62,15 @@ public class BlockVertslab extends Block implements IBucketPickupHandler, ILiqui
                 ll = true;
             }
         }
+        else if (back.getBlock() instanceof BlockVertslab && facing.getAxis() != back.get(FACING).getAxis()) {
+            if (facing.rotateY() == back.get(FACING)) {
+                ul = false;
+            }
+            else {
+                ur = false;
+            }
+        }
+
         switch (facing) {
             case EAST:  return state.with(NW, ll).with(NE, ul).with(SE, ur).with(SW, lr);
             case SOUTH: return state.with(NW, lr).with(NE, ll).with(SE, ul).with(SW, ur);

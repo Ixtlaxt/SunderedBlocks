@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_clarate_pale_cut_vertslab"
+                    "name": "sunderedblocks:stone_clarate_pale_cut_block"
                 }
             ],
             "conditions": [

@@ -1,13 +1,13 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "#",
+        "#",
+        "#"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_balk_dark_brick_vertslab"
+            "item": "sunderedblocks:stone_balk_dark_brick_slab"
         }
     },
     "result": {

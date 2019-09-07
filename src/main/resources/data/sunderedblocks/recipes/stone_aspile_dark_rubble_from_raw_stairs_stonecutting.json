@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_aspile_dark_raw_stairs"
+    },
+    "result": "sunderedblocks:stone_aspile_rubble",
+    "count": 4
+}

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_sterist_dark_raw_block"
+    },
+    "result": "sunderedblocks:stone_sterist_dark_brick_vertslab",
+    "count": 2
+}

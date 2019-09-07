@@ -63,7 +63,7 @@ public class ModBlocks {
         InitSterist.init();
         InitUmberlite.init();
 
-        InitVertslab.init();
+        InitVanilla.init();
 
         BLOCKS.forEach(block -> event.getRegistry().register(block));
         BLOCKS.clear();

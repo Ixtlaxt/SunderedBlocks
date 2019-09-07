@@ -2,16 +2,16 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "#  ",
-        "#  ",
-        "#  "
+        "## ",
+        "###"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_sterist_pale_tile_stairs"
+            "item": "sunderedblocks:stone_sterist_pale_tile_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_sterist_pale_tile_stairs",
-        "count": 3
+        "count": 4
     }
 }

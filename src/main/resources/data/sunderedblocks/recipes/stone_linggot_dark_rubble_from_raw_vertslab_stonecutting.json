@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_linggot_dark_raw_vertslab"
+    },
+    "result": "sunderedblocks:stone_linggot_rubble",
+    "count": 2
+}

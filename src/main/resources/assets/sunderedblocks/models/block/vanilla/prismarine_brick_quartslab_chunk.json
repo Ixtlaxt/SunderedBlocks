@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_chunk",
+    "textures": {
+        "end": "block/prismarine_bricks",
+        "side": "block/prismarine_bricks"
+    }
+}

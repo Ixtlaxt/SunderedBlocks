@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_inventory",
+    "textures": {
+        "end": "block/acacia_planks",
+        "side": "block/acacia_planks"
+    }
+}

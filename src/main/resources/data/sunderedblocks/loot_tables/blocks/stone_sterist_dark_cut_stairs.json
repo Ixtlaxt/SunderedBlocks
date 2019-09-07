@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_sterist_dark_cut_vertslab"
+                    "name": "sunderedblocks:stone_sterist_dark_cut_stairs"
                 }
             ],
             "conditions": [

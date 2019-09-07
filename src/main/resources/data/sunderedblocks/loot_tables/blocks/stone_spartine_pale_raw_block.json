@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_spartine_pale_raw_vertslab"
+                    "name": "sunderedblocks:stone_spartine_pale_raw_block"
                 }
             ],
             "conditions": [

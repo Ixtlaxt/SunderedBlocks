@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_chunk_top",
+    "textures": {
+        "end": "block/red_nether_bricks",
+        "side": "block/red_nether_bricks"
+    }
+}

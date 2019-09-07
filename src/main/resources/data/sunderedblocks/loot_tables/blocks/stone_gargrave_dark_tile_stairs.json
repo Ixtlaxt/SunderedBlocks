@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_gargrave_dark_tile_vertslab"
+                    "name": "sunderedblocks:stone_gargrave_dark_tile_stairs"
                 }
             ],
             "conditions": [

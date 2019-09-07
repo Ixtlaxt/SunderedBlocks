@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_clarate_pale_raw_block"
+    },
+    "result": "sunderedblocks:stone_clarate_pale_cut_block",
+    "count": 1
+}

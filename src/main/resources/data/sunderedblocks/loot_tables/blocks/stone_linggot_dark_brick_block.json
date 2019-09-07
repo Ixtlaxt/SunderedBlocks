@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_linggot_dark_brick_vertslab"
+                    "name": "sunderedblocks:stone_linggot_dark_brick_block"
                 }
             ],
             "conditions": [

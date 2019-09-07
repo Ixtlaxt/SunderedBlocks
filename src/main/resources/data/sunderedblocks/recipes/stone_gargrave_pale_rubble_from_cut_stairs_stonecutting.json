@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_gargrave_pale_cut_stairs"
+    },
+    "result": "sunderedblocks:stone_gargrave_rubble",
+    "count": 4
+}

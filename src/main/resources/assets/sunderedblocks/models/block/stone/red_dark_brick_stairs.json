@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "sunderedblocks:block/stone/red_dark_brick",
-    "top": "sunderedblocks:block/stone/red_dark_brick",
-    "side": "sunderedblocks:block/stone/red_dark_brick"
-  }
-}

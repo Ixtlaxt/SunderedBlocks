@@ -1,0 +1,7 @@
+{
+    "parent": "sunderedblocks:block/base/quartslab_chunk_top",
+    "textures": {
+        "end": "sunderedblocks:block/stone/gargrave_dark_brick",
+        "side": "sunderedblocks:block/stone/gargrave_dark_brick"
+    }
+}

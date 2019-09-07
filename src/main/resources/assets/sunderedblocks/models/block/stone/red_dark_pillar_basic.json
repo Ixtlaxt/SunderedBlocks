@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "sunderedblocks:block/stone/red_dark_cut",
-    "side": "sunderedblocks:block/stone/red_dark_pillar_basic"
-  }
-}

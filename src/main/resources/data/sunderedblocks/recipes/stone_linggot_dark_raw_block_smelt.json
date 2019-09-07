@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_linggot_gravel"
+    },
+    "result": "sunderedblocks:stone_linggot_dark_raw_block",
+    "experience": 0.1,
+    "cookingtime": 200
+}

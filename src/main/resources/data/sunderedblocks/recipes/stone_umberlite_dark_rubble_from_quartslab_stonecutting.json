@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_umberlite_dark_quartslab"
+    },
+    "result": "sunderedblocks:stone_umberlite_rubble",
+    "count": 1
+}

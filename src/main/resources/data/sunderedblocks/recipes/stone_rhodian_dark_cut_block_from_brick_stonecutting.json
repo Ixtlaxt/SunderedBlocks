@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_rhodian_dark_brick_block"
+    },
+    "result": "sunderedblocks:stone_rhodian_dark_cut_block",
+    "count": 1
+}

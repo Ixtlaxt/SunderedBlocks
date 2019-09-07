@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_rhodian_pale_tile_vertslab"
+    },
+    "result": "sunderedblocks:stone_rhodian_rubble",
+    "count": 2
+}

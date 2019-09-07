@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_sterist_dark_raw_slab"
+    },
+    "result": "sunderedblocks:stone_sterist_rubble",
+    "count": 2
+}

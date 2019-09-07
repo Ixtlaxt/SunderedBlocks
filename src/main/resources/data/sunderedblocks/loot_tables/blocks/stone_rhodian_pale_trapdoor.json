@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "sunderedblocks:stone_rhodian_pale_vertslab"
+                    "name": "sunderedblocks:stone_rhodian_pale_trapdoor"
                 }
             ],
             "conditions": [

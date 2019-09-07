@@ -1,17 +1,15 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#  ",
-        "#  ",
-        "#  "
+        "###"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_clarate_dark_cut_slab"
+            "item": "sunderedblocks:stone_clarate_dark_cut_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_clarate_dark_cut_slab",
-        "count": 3
+        "count": 6
     }
 }

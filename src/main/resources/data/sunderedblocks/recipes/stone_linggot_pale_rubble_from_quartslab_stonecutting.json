@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "sunderedblocks:stone_linggot_pale_quartslab"
+    },
+    "result": "sunderedblocks:stone_linggot_rubble",
+    "count": 1
+}

@@ -2,16 +2,16 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "#  ",
-        "#  ",
-        "#  "
+        "## ",
+        "###"
     ],
     "key": {
         "#": {
-            "item": "sunderedblocks:stone_gargrave_pale_brick_stairs"
+            "item": "sunderedblocks:stone_gargrave_pale_brick_block"
         }
     },
     "result": {
         "item": "sunderedblocks:stone_gargrave_pale_brick_stairs",
-        "count": 3
+        "count": 4
     }
 }
